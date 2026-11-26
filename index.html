@@ -195,11 +195,11 @@ body{min-height:100vh}
 .reader.single .chrome.r{display:none}
 .chrome .hd{position:absolute;top:40px;left:var(--m);right:var(--m);display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:#8b8a82;border-bottom:1px solid #ece8dc;padding-bottom:10px}
 .chrome .hd b{color:var(--acc);font-weight:700}
-.chrome .ft{position:absolute;bottom:34px;left:var(--m);right:var(--m);display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#9a988f}
+.chrome .ft{position:absolute;bottom:16px;left:28px;right:28px;flex-direction:row-reverse;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#9a988f}
 .chrome .ft .num{min-width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:14px}
-.chrome .ft .bar{flex:1;height:3px;margin:0 14px;background:linear-gradient(90deg,var(--acc) 0 60px,#ece8dc 60px)}
-.chrome.r .ft{flex-direction:row-reverse}
-.chrome.r .ft .bar{background:linear-gradient(270deg,var(--acc) 0 60px,#ece8dc 60px)}
+.chrome .ft .bar{flex:1;height:3px;margin:0 14px;background:linear-gradient(270deg,var(--acc) 0 60px,#ece8dc 60px)}
+.chrome.r .ft,.chrome.odd .ft{flex-direction:row}
+.chrome.r .ft .bar,.chrome.odd .ft .bar{background:linear-gradient(90deg,var(--acc) 0 60px,#ece8dc 60px)}
 .chrome .corner{position:absolute;top:0;width:150px;height:150px;opacity:.9}
 .chrome.l .corner{left:0}.chrome.r .corner{right:0;transform:scaleX(-1)}
 .chrome.hide .hd,.chrome.hide .ft,.chrome.hide .corner{display:none}
@@ -291,7 +291,7 @@ body{min-height:100vh}
 .flow details summary::marker{color:var(--acc)}
 .flow .gl{grid-template-columns:170px 1fr;gap:4px 18px}
 .flow .gl dt{color:var(--acc)}
-.flow .toc a{padding:8px 0;font-size:15px}
+.flow .toc a{padding:4px 0;font-size:14.5px;line-height:1.5}
 .flow .toc .sub2{font-size:14px}
 .flow .toc span[data-pnum]{font-family:var(--serif);color:var(--acc);font-weight:700}
 .flow .btn-dark{background:var(--acc)}
@@ -425,6 +425,8 @@ body{min-height:100vh}
 }
 
 /* ===== Rangkuman ===== */
+.flow table.lk td{height:34px}
+.flow table.lk td:first-child{text-align:center;font-weight:700;width:70px}
 .flow .sh{break-inside:avoid}
 .flow .sh>.kicker{display:table!important;background:var(--acc-l);color:var(--acc);font-size:11px;letter-spacing:1.6px;padding:5px 12px;border-radius:999px;margin:0 0 14px;font-weight:700}
 .rf{display:flex;gap:10px;align-items:flex-start;font-size:.95em;padding:4px 0}
@@ -604,7 +606,7 @@ body{background:#f4efe3}
 .h-flow b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;margin-bottom:6px}
 .h-flow p{font-size:13.5px;color:#6b6a64;line-height:1.55;margin:0}
 /* chapters */
-.h-chaps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.h-chaps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .chap{position:relative;text-align:left;border:0;border-radius:24px;padding:24px 22px 20px;min-height:280px;color:#fff;font:inherit;cursor:pointer;display:flex;flex-direction:column;overflow:hidden;transition:transform .25s,box-shadow .25s;box-shadow:0 24px 44px -26px rgba(0,0,0,.6)}
 .chap:after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.12)}
 .chap:hover{transform:translateY(-8px) rotate(-.5deg)}
@@ -688,9 +690,9 @@ body{background:#f4efe3}
     <div class="hx-grid">
       <div class="hx-text">
         <span class="hx-chip"><i></i> Buku Digital Pembelajaran Terintegrasi</span>
-        <div class="hx-subj hx-up"><span>🌿 IPAS</span><span>🧮 Matematika</span><span>✍️ Bahasa Indonesia</span></div>
+        <div class="hx-subj hx-up"><span>🌿 Ilmu Pengetahuan Alam dan Sosial (IPAS)</span></div>
         <h1 class="hx-title"><span class="l1">Pupuk dari</span><span class="l2">Sampah <em>Makanan</em></span></h1>
-        <p class="hx-lead">Ubah sisa nasi, sayur, dan kulit buah menjadi pupuk yang menyuburkan bumi. Belajar bersama Nara, Bima, dan Kompi lewat pengamatan, hitungan, dan tulisan.</p>
+        <p class="hx-lead">Ubah sisa nasi, sayur, dan kulit buah menjadi pupuk yang menyuburkan bumi. Belajar bersama Nara, Bima, dan Kompi lewat pengamatan dan percobaan.</p>
         <div class="hx-cta">
           <button class="hx-btn" data-open>Mulai membaca <span class="arr">→</span></button>
           <button class="hx-ghost" data-open-at="daftar-isi">☰ Daftar Isi</button>
@@ -719,8 +721,8 @@ body{background:#f4efe3}
 
   <!-- STATS -->
   <section class="h-stats">
-    <div><span class="si">📚</span><b>4</b><span>Bab Materi</span></div>
-    <div><span class="si">🧩</span><b>16</b><span>Subbab</span></div>
+    <div><span class="si">📚</span><b>2</b><span>Bab Materi</span></div>
+    <div><span class="si">🧩</span><b>10</b><span>Subbab</span></div>
     <div><span class="si">📝</span><b>10</b><span>Soal Evaluasi</span></div>
     <div><span class="si">🎬</span><b>2</b><span>Video Pembelajaran</span></div>
   </section>
@@ -738,12 +740,10 @@ body{background:#f4efe3}
 
   <!-- BAB -->
   <section class="h-sec">
-    <div class="h-head"><span class="h-chip">Isi Buku</span><h2>Empat bab, satu misi: <em>bumi tanpa sisa</em></h2></div>
+    <div class="h-head"><span class="h-chip">Isi Buku</span><h2>Dua bab, satu misi: <em>bumi tanpa sisa</em></h2></div>
     <div class="h-chaps">
       <button class="chap c1" data-open-at="bab1"><span class="cn">01</span><span class="ck">IPAS</span><b>Hubungan Komponen Biotik dan Abiotik yang Mengganggu Ekosistem</b><small>4 subbab · pengurai, metana, air lindi</small><i>Buka bab →</i><span class="ce">🦠</span></button>
       <button class="chap c2" data-open-at="bab2"><span class="cn">02</span><span class="ck">IPAS</span><b>Upaya Penghematan Energi</b><small>6 subbab · kompos, biogas, ramah lingkungan</small><i>Buka bab →</i><span class="ce">🪴</span></button>
-      <button class="chap c3" data-open-at="bab3"><span class="cn">03</span><span class="ck">Matematika</span><b>Operasi Hitung</b><small>2 subbab · rasio, rasio satuan, proporsi</small><i>Buka bab →</i><span class="ce">⚖️</span></button>
-      <button class="chap c4" data-open-at="bab4"><span class="cn">04</span><span class="ck">Bahasa Indonesia</span><b>Teks Nonsastra</b><small>2 subbab · laporan & persuasi bebas emisi</small><i>Buka bab →</i><span class="ce">📣</span></button>
     </div>
   </section>
 
@@ -752,7 +752,7 @@ body{background:#f4efe3}
     <div class="h-head"><span class="h-chip">Teman Belajar</span><h2>Kenalan dengan para tokoh</h2></div>
     <div class="h-chars">
       <div class="k1"><div class="av" data-av="nara"></div><b>Nara</b><span>Si Penjelajah</span></div>
-      <div class="k2"><div class="av" data-av="bima"></div><b>Bima</b><span>Si Penghitung</span></div>
+      <div class="k2"><div class="av" data-av="bima"></div><b>Bima</b><span>Si Peneliti</span></div>
       <div class="k3"><div class="av" data-av="sari"></div><b>Bu Sari</b><span>Guru Pembimbing</span></div>
       <div class="k4"><div class="av" data-av="kompi"></div><b>Kompi</b><span>Maskot Pengurai</span></div>
     </div>
@@ -763,7 +763,7 @@ body{background:#f4efe3}
     <div class="h-card">
       <span class="h-chip">Tentang Buku</span>
       <p>Buku digital ini mengajak murid menelusuri perjalanan sampah sisa makanan: bagaimana ia memengaruhi komponen biotik dan abiotik, mengapa ia ikut memanaskan bumi, dan bagaimana mengubahnya menjadi pupuk kompos yang bermanfaat.</p>
-      <ul class="h-feat"><li>🎬 Video & ilustrasi</li><li>🧮 Kalkulator interaktif</li><li>📝 Kuis dinilai otomatis</li><li>⬇ Simpan PDF A4</li></ul>
+      <ul class="h-feat"><li>🎬 Video & ilustrasi</li><li>🪴 Proyek kompos</li><li>📝 Kuis dinilai otomatis</li><li>⬇ Simpan PDF A4</li></ul>
     </div>
     <div class="h-card dark">
       <span class="h-chip">Tim Penulis</span>
@@ -777,7 +777,7 @@ body{background:#f4efe3}
     <div><h3>Siap mengubah sisa jadi subur?</h3><p>Buka bukunya dan mulai petualanganmu sekarang.</p></div>
     <button class="hx-btn" data-open>Buka buku <span class="arr">→</span></button>
   </section>
-  <footer class="h-foot">Pupuk dari Sampah Makanan · Buku Digital Pembelajaran Terintegrasi IPAS, Matematika, dan Bahasa Indonesia</footer>
+  <footer class="h-foot">Pupuk dari Sampah Makanan · Buku Digital Pembelajaran Terintegrasi IPAS</footer>
 </main>
 
 
@@ -794,7 +794,7 @@ body{background:#f4efe3}
         <div class="pgbg l" id="bgL"></div><div class="pgbg r" id="bgR"></div>
         <div class="vp"><div class="flow content" id="flow">
 <section class="sec opener titlepage" id="judul" data-title="Halaman Judul" data-theme="pre">
-<p class="tp-sub tp-subj">IPAS · Matematika · Bahasa Indonesia</p>
+<p class="tp-sub tp-subj">Ilmu Pengetahuan Alam dan Sosial (IPAS)</p>
 <p class="op-kick center">Buku Digital Pembelajaran Terintegrasi</p>
 <h1 class="tp-title">Pupuk dari<br><i>Sampah Makanan</i></h1>
 <div class="tp-art" data-fig="titleart"></div>
@@ -804,9 +804,9 @@ body{background:#f4efe3}
     <div class="sh"><p class="kicker">Bagian Awal</p>
     <h2>Kata Pengantar</h2>
     <div class="ill" data-ill="pengantar"></div></div>
-    <p>Puji syukur kami panjatkan ke hadirat Tuhan Yang Maha Esa karena atas rahmat dan karunia-Nya buku digital <i>Pupuk dari Sampah Makanan</i> dapat diselesaikan. Buku digital ini disusun sebagai bahan ajar terintegrasi yang memadukan muatan Ilmu Pengetahuan Alam dan Sosial (IPAS), Matematika, dan Bahasa Indonesia dengan tema pengelolaan sampah sisa makanan.</p>
+    <p>Puji syukur kami panjatkan ke hadirat Tuhan Yang Maha Esa karena atas rahmat dan karunia-Nya buku digital <i>Pupuk dari Sampah Makanan</i> dapat diselesaikan. Buku digital ini disusun sebagai bahan ajar terintegrasi yang memadukan materi Ilmu Pengetahuan Alam dan Sosial (IPAS) dengan kegiatan nyata di sekolah dalam tema pengelolaan sampah sisa makanan.</p>
     <p>Sampah sisa makanan merupakan jenis sampah terbesar di Indonesia. Data Sistem Informasi Pengelolaan Sampah Nasional (SIPSN) menunjukkan bahwa hampir 40% sampah nasional adalah sisa makanan. Bersamaan dengan pelaksanaan Program Makan Bergizi Gratis (MBG) di sekolah, persoalan sisa makanan menjadi semakin dekat dengan kehidupan murid sehari-hari. Oleh karena itu, sekolah merupakan tempat yang tepat untuk menumbuhkan pengetahuan, keterampilan, dan sikap peduli lingkungan.</p>
-    <p>Melalui buku digital ini, murid diajak mengamati hubungan komponen biotik dan abiotik dalam penguraian sampah, menganalisis dampaknya terhadap ekosistem dan perubahan iklim, merancang upaya penghematan energi dan pemanfaatan sumber daya lokal, menghitung proporsi sampah, hingga menulis teks laporan dan teks persuasi. Buku digital ini dilengkapi gambar, video, kegiatan, kalkulator interaktif, dan soal evaluasi, serta dapat diakses tanpa koneksi internet.</p>
+    <p>Melalui buku digital ini, murid diajak mengamati hubungan komponen biotik dan abiotik dalam penguraian sampah, menganalisis dampaknya terhadap ekosistem dan perubahan iklim, hingga merancang upaya penghematan energi dan memanfaatkan sumber daya lokal dengan membuat pupuk kompos. Buku digital ini dilengkapi gambar, video, kegiatan, dan soal evaluasi, serta dapat diakses tanpa koneksi internet.</p>
     <p>Kami menyampaikan terima kasih kepada semua pihak yang telah membantu penyusunan buku digital ini. Kami menyadari bahwa buku digital ini masih memiliki kekurangan sehingga kritik dan saran yang membangun sangat kami harapkan. Semoga buku digital ini bermanfaat bagi murid, guru, dan semua pihak yang peduli terhadap kelestarian bumi.</p>
     <p style="text-align:right;margin-top:28px">Bogor, 2026<br><b>Tim Penulis</b></p>
   </section>
@@ -831,14 +831,14 @@ body{background:#f4efe3}
 <ol>
 <li>Bacalah Capaian dan Tujuan Pembelajaran terlebih dahulu agar kamu tahu apa yang akan dipelajari.</li>
 <li>Kenali para tokoh pada halaman Perkenalan Karakter. Mereka akan menemanimu di setiap bab.</li>
-<li>Pelajari materi secara berurutan dari Bab 1 sampai Bab 4. Tonton video, amati gambar, lalu kerjakan setiap kegiatan.</li>
+<li>Pelajari materi secara berurutan dari Bab 1 sampai Bab 2. Tonton video, amati gambar, lalu kerjakan setiap kegiatan.</li>
 <li>Kerjakan Soal Evaluasi di akhir buku. Nilai muncul otomatis setelah kamu menekan <b>Periksa Jawaban</b>.</li>
 <li>Gunakan Glosarium jika menemukan istilah yang sulit.</li>
 </ol>
 <h3>Untuk Guru</h3>
 <ol>
 <li>Buku dapat ditayangkan secara klasikal atau dibaca mandiri oleh murid.</li>
-<li>Bab 1–2 memuat tujuan IPAS, Bab 3 Matematika, dan Bab 4 Bahasa Indonesia.</li>
+<li>Bab 1 dan Bab 2 memuat tujuan pembelajaran IPAS.</li>
 <li>Proyek pembuatan kompos (Bab 2) disarankan dilakukan berkelompok selama 4–8 minggu.</li>
 </ol>
 <h3>Arti Kotak dalam Buku</h3>
@@ -860,34 +860,16 @@ body{background:#f4efe3}
       <li>Murid mampu <i>"menganalisis hubungan antar komponen biotik dan abiotik, serta pengaruhnya terhadap ekosistem"</i>.</li>
       <li>Murid mampu <i>"menghasilkan upaya penghematan energi, serta pemanfaatan sumber energi alternatif dari sumber daya yang ada di sekitarnya sebagai upaya mitigasi perubahan iklim"</i>.</li>
     </ol>
-    <h3>Matematika</h3>
-    <ol>
-      <li>Murid mampu <i>"bernalar secara proporsional untuk menyelesaikan masalah sehari-hari dengan rasio satuan; menggunakan operasi perkalian dan pembagian dalam menyelesaikan masalah sehari-hari yang terkait dengan proporsi"</i>.</li>
-    </ol>
-    <h3>Bahasa Indonesia</h3>
-    <ol>
-      <li>Murid mampu menganalisis informasi dan nilai-nilai dalam teks nonsastra berbentuk visual maupun audiovisual, seperti infografis atau video dokumenter mengenai dampak sampah makanan terhadap pemanasan global.</li>
-      <li>Murid mampu <i>"menulis berbagai tipe teks sederhana berdasarkan gagasan, hasil pengamatan, pengalaman, dan/atau imajinasi dengan rangkaian kalimat kompleks"</i> serta mempresentasikan gagasan secara efektif dan santun, misalnya menyusun teks laporan pengamatan sampah kantin atau teks persuasi kampanye bebas emisi.</li>
-    </ol>
   </section>
 <section class="sec" id="tp" data-title="Tujuan Pembelajaran" data-theme="pre">
     <div class="sh"><p class="kicker">Bagian Awal</p>
     <h2>Tujuan Pembelajaran</h2>
-    </div><p>Setelah mempelajari buku digital ini, kamu diharapkan dapat mencapai sepuluh tujuan pembelajaran berikut. Setiap tujuan dipelajari pada bab yang tertera di kartunya.</p>
-    <div class="tp-sum"><div class="s1"><b>4</b><span>Tujuan IPAS</span></div><div class="s2"><b>2</b><span>Tujuan Matematika</span></div><div class="s3"><b>4</b><span>Tujuan Bahasa Indonesia</span></div></div>
-    <div class="tp-head s1"><span>🌿</span>IPAS</div>
+    </div><p>Setelah mempelajari buku digital ini, kamu diharapkan dapat mencapai empat tujuan pembelajaran IPAS berikut. Setiap tujuan dipelajari pada bab yang tertera di kartunya.</p>
+        <div class="tp-head s1"><span>🌿</span>IPAS</div>
     <div class="tp-card s1"><div class="tp-no">IPAS<b>1.1</b></div><div class="tp-tx"><p>Melalui pengamatan gambar dan video, murid mampu menjelaskan hubungan antara komponen biotik (mikroorganisme, tumbuhan, dan hewan pengurai) dan abiotik (air, tanah, udara, dan suhu) dalam proses penguraian sampah sisa makanan dengan benar.</p><span class="tp-bab">📖 Bab 1 · a–c</span></div></div>
     <div class="tp-card s1"><div class="tp-no">IPAS<b>1.2</b></div><div class="tp-tx"><p>Melalui analisis studi kasus penumpukan sampah sisa MBG, murid mampu menganalisis pengaruh sampah sisa makanan terhadap komponen biotik, abiotik, dan keseimbangan ekosistem dengan tepat.</p><span class="tp-bab">📖 Bab 1 · b–d</span></div></div>
     <div class="tp-card s1"><div class="tp-no">IPAS<b>2.1</b></div><div class="tp-tx"><p>Melalui diskusi kelompok, murid mampu merancang upaya penghematan energi dan pemanfaatan energi alternatif dari sumber daya di lingkungan sekitar sebagai bentuk mitigasi perubahan iklim secara logis dan realistis.</p><span class="tp-bab">📖 Bab 2 · a, b, f</span></div></div>
     <div class="tp-card s1"><div class="tp-no">IPAS<b>2.2</b></div><div class="tp-tx"><p>Melalui kegiatan presentasi proyek, murid mampu menghasilkan dan mempresentasikan gagasan pemanfaatan sumber daya lokal untuk mengurangi penggunaan energi tidak terbarukan dengan percaya diri dan bertanggung jawab.</p><span class="tp-bab">📖 Bab 2 · c–e</span></div></div>
-    <div class="tp-head s2"><span>🧮</span>Matematika</div>
-    <div class="tp-card s2"><div class="tp-no">MTK<b>1.1</b></div><div class="tp-tx"><p>Melalui pengamatan data jumlah sampah sisa makanan di sekolah, murid mampu mengidentifikasi perbandingan jumlah sampah berdasarkan jenisnya dengan tepat.</p><span class="tp-bab">📖 Bab 3 · a</span></div></div>
-    <div class="tp-card s2"><div class="tp-no">MTK<b>1.2</b></div><div class="tp-tx"><p>Melalui pemecahan masalah berbasis data, murid mampu menganalisis dan menyelesaikan permasalahan proporsi dalam pengelolaan sampah sisa makanan secara logis dan sistematis.</p><span class="tp-bab">📖 Bab 3 · b</span></div></div>
-    <div class="tp-head s3"><span>✍️</span>Bahasa Indonesia</div>
-    <div class="tp-card s3"><div class="tp-no">BI<b>1.1</b></div><div class="tp-tx"><p>Melalui pengamatan infografis, murid mampu menemukan fakta dan data tentang hubungan sampah makanan dengan emisi gas rumah kaca secara tepat.</p><span class="tp-bab">📖 Bab 4 · a</span></div></div>
-    <div class="tp-card s3"><div class="tp-no">BI<b>1.2</b></div><div class="tp-tx"><p>Melalui kegiatan diskusi kelompok, murid mampu menganalisis nilai-nilai kepedulian lingkungan, tanggung jawab, dan keberlanjutan yang terkandung dalam teks nonsastra dengan tepat.</p><span class="tp-bab">📖 Bab 4 · a</span></div></div>
-    <div class="tp-card s3"><div class="tp-no">BI<b>2.1</b></div><div class="tp-tx"><p>Melalui kegiatan menulis, murid mampu menghasilkan teks laporan hasil pengamatan cara membuat pupuk dari sampah sisa makanan menggunakan kalimat kompleks, kosakata baku, dan informasi faktual sesuai struktur teks.</p><span class="tp-bab">📖 Bab 4 · a</span></div></div>
-    <div class="tp-card s3"><div class="tp-no">BI<b>2.2</b></div><div class="tp-tx"><p>Melalui kegiatan diskusi dan pengembangan gagasan, murid mampu menyusun teks persuasi berupa ajakan mengurangi sampah makanan dan mendukung kampanye lingkungan rendah emisi dengan alasan yang logis.</p><span class="tp-bab">📖 Bab 4 · b</span></div></div>
     <div class="box info"><div class="bt">🎯 Tips</div><p>Centang tujuan yang sudah kamu kuasai di buku catatanmu setelah menyelesaikan setiap bab, lalu uji pemahamanmu pada Soal Evaluasi.</p></div>
   </section>
 <section class="sec" id="karakter" data-title="Perkenalan Karakter" data-theme="pre">
@@ -895,11 +877,11 @@ body{background:#f4efe3}
     <h2>Perkenalan Karakter</h2>
     </div><p>Selama belajar, kamu akan ditemani empat tokoh berikut. Mereka akan bertanya, berpendapat, dan memberi petunjuk di setiap bab.</p>
     <div class="char"><div class="big" data-av="nara"></div><div><h3>Nara</h3><span class="badge">Si Penjelajah</span><span class="badge">IPAS</span><p>Murid yang selalu penasaran. Nara senang mengamati tanaman, serangga, dan apa saja yang terjadi di kebun sekolah. Pertanyaan favoritnya: <i>"Kenapa bisa begitu?"</i></p></div></div>
-    <div class="char"><div class="big" data-av="bima"></div><div><h3>Bima</h3><span class="badge">Si Penghitung</span><span class="badge">Matematika</span><p>Teman sekelas Nara yang suka angka dan data. Bima rajin menimbang, mencatat, lalu membandingkan apa pun — termasuk sisa makanan di ompreng teman-temannya.</p></div></div>
-    <div class="char"><div class="big" data-av="sari"></div><div><h3>Bu Sari</h3><span class="badge">Guru Pembimbing</span><span class="badge">Bahasa Indonesia</span><p>Guru kelas yang sabar dan kreatif. Bu Sari membimbing murid melakukan proyek kompos dan menulis kampanye peduli lingkungan dengan bahasa yang baik dan santun.</p></div></div>
+    <div class="char"><div class="big" data-av="bima"></div><div><h3>Bima</h3><span class="badge">Si Peneliti</span><span class="badge">Pengamat</span><p>Teman sekelas Nara yang suka angka dan data. Bima rajin menimbang, mencatat, lalu membandingkan apa pun — termasuk sisa makanan di ompreng teman-temannya.</p></div></div>
+    <div class="char"><div class="big" data-av="sari"></div><div><h3>Bu Sari</h3><span class="badge">Guru Pembimbing</span><span class="badge">IPAS</span><p>Guru kelas yang sabar dan kreatif. Bu Sari membimbing murid melakukan proyek kompos dan mengajak seluruh warga sekolah peduli lingkungan.</p></div></div>
     <div class="char"><div class="big" data-av="kompi"></div><div><h3>Kompi</h3><span class="badge">Maskot</span><span class="badge">Pengurai</span><p>Cacing tanah yang tinggal di komposter sekolah. Kompi adalah "pegawai" alam yang mengubah sisa makanan menjadi tanah subur. Ia sering muncul membawa <b>Tahukah Kamu?</b></p></div></div>
   </section>
-<section class="sec opener matdiv" id="materi" data-title="Materi" data-theme="pre"><p class="op-kick">Bagian Inti</p><h2 class="op-title">Materi</h2><p class="op-tag">Empat bab untuk mengenal, mengolah, menghitung, dan menyuarakan masalah sampah sisa makanan.</p><div class="matlist"><a data-goto="bab1"><span>Bab 1</span>Hubungan Komponen Biotik dan Abiotik yang Mengganggu Ekosistem</a><a data-goto="bab2"><span>Bab 2</span>Upaya Penghematan Energi</a><a data-goto="bab3"><span>Bab 3</span>Operasi Hitung</a><a data-goto="bab4"><span>Bab 4</span>Teks Nonsastra</a></div></section>
+<section class="sec opener matdiv" id="materi" data-title="Materi" data-theme="pre"><p class="op-kick">Bagian Inti</p><h2 class="op-title">Materi</h2><p class="op-tag">Dua bab untuk mengenal masalah sampah sisa makanan dan mengubahnya menjadi pupuk yang bermanfaat.</p><div class="matlist"><a data-goto="bab1"><span>Bab 1</span>Hubungan Komponen Biotik dan Abiotik yang Mengganggu Ekosistem</a><a data-goto="bab2"><span>Bab 2</span>Upaya Penghematan Energi</a></div></section>
 <section class="sec opener" id="bab1" data-title="Bab 1. Hubungan Komponen Biotik dan Abiotik" data-theme="b1">
 <div class="op-num">01</div>
 <p class="op-kick">Bab 1 · IPAS</p>
@@ -922,7 +904,7 @@ body{background:#f4efe3}
       <div class="chat"><div class="av" data-av="sari"></div><div class="bubble"><b>Bu Sari</b>Pertanyaan bagus, Nara! Di bab ini kita akan menelusuri perjalanannya, mulai dari jenis sampah hingga pengaruhnya pada ekosistem.</div></div>
     
 </section>
-<section class="sec" id="b1a" data-title="1a. Jenis-jenis Sampah Organik" data-theme="b1">
+<section class="sec brk" id="b1a" data-title="1a. Jenis-jenis Sampah Organik" data-theme="b1">
     <div class="sh"><p class="kicker">Bab 1 · Subbab a</p>
     <h2>Jenis-jenis Sampah Organik</h2>
     <div class="ill" data-ill="b1a"></div></div>
@@ -960,7 +942,7 @@ body{background:#f4efe3}
       <button class="btn-dark" id="sortCheck">Periksa</button> <span id="sortRes" style="margin-left:10px;font-size:13px"></span>
     </div>
   </section>
-<section class="sec" id="b1b" data-title="1b. Sampah Sisa Makanan" data-theme="b1">
+<section class="sec brk" id="b1b" data-title="1b. Sampah Sisa Makanan" data-theme="b1">
     <div class="sh"><p class="kicker">Bab 1 · Subbab b</p>
     <h2>Sampah Sisa Makanan</h2>
     <div class="ill" data-ill="b1b"></div></div>
@@ -987,7 +969,7 @@ body{background:#f4efe3}
     <p>Beberapa sekolah sudah berinovasi. SMAN 7 Manado mengumpulkan 5–10 kg sisa makanan MBG per hari, terutama kulit buah dan potongan sayur, lalu mengolahnya menjadi <i>eco enzyme</i>. Di Jakarta, sisa makanan dari sekolah dikumpulkan terpisah untuk pakan maggot atau bahan kompos. Menteri Lingkungan Hidup juga menyampaikan bahwa sisa makanan MBG akan diolah menjadi pupuk kompos.</p>
     <div class="box think"><div class="bt">💭 Ayo Berpikir</div><ol><li>Amati sisa makanan di kelasmu setelah makan siang. Jenis makanan apa yang paling banyak tersisa?</li><li>Menurutmu, apa penyebab utamanya? Tuliskan dua usulan agar sisa makanan berkurang.</li></ol></div>
   </section>
-<section class="sec" id="b1c" data-title="1c. Pengaruh terhadap Biotik, Abiotik, dan Ekosistem" data-theme="b1">
+<section class="sec brk" id="b1c" data-title="1c. Pengaruh terhadap Biotik, Abiotik, dan Ekosistem" data-theme="b1">
     <div class="sh"><p class="kicker">Bab 1 · Subbab c</p>
     <h2>Pengaruh Sampah Sisa Makanan terhadap Komponen Biotik, Abiotik, dan Keseimbangan Ekosistem</h2>
     <div class="ill" data-ill="b1c"></div></div>
@@ -1025,8 +1007,11 @@ body{background:#f4efe3}
       <p><b>Alat dan bahan:</b> 3 gelas plastik bekas, tanah, sisa nasi, kulit pisang, plastik kecil, air.</p>
       <ol><li>Isi setiap gelas dengan tanah setengah bagian.</li><li>Gelas A: sisa nasi + tanah lembap. Gelas B: sisa nasi + tanah kering. Gelas C: potongan plastik + tanah lembap.</li><li>Letakkan di tempat teduh. Amati setiap 2 hari selama 2 minggu (warna, bau, jamur, serangga).</li><li>Catat hasilnya dalam tabel. Komponen abiotik apa yang paling memengaruhi penguraian?</li></ol>
     </div>
+    <h3>Lembar Pengamatan Percobaan Penguraian</h3>
+    <table class="t lk"><tr><th>Hari ke-</th><th>Gelas A (nasi + tanah lembap)</th><th>Gelas B (nasi + tanah kering)</th><th>Gelas C (plastik + tanah lembap)</th></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>8</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>10</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>12</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>14</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+    <p class="cap" style="text-align:left">Tuliskan perubahan warna, bau, jamur, atau hewan kecil yang kamu temukan.</p>
   </section>
-<section class="sec" id="b1d" data-title="1d. Kesehatan, Kemiskinan, dan Biodiversitas" data-theme="b1">
+<section class="sec brk" id="b1d" data-title="1d. Kesehatan, Kemiskinan, dan Biodiversitas" data-theme="b1">
     <div class="sh"><p class="kicker">Bab 1 · Subbab d</p>
     <h2>Keterkaitan Masalah Sampah Sisa Makanan dengan Kesehatan, Kemiskinan, dan Biodiversitas</h2>
     <div class="ill" data-ill="b1d"></div></div>
@@ -1053,7 +1038,12 @@ body{background:#f4efe3}
     <div class="video" data-src="video/bab1d-bahaya-sampah-makanan.mp4" data-ic="⚠️" data-lab="Bab 1 · Subbab d" data-yt="X2oMo3Q8Tek" data-title="Video: Bahaya Sampah Makanan" data-q="bahaya sampah makanan"></div>
     <div class="box act"><div class="bt">👀 Ayo Mengamati Video</div><p>Tonton video <i>Bahaya Sampah Makanan</i> di atas, lalu kerjakan:</p><ol><li>Tuliskan tiga bahaya sampah makanan yang disebutkan atau ditunjukkan dalam video.</li><li>Kelompokkan setiap bahaya tersebut ke dalam aspek <b>kesehatan</b>, <b>kemiskinan</b>, atau <b>biodiversitas</b>.</li><li>Apakah bahaya yang sama dapat terjadi di sekolahmu? Jelaskan alasanmu.</li></ol></div>
     <div class="box think"><div class="bt">💭 Ayo Berpikir (Diskusi Kelompok)</div><p>Buatlah peta pikiran (mind map) yang menunjukkan hubungan antara sisa makanan di sekolahmu dengan kesehatan, kemiskinan, dan biodiversitas. Presentasikan di depan kelas.</p></div>
-      <div class="rangkuman"><div class="rk-h"><span>📌</span>Rangkuman Bab 1</div><ul><li>Sampah organik berasal dari makhluk hidup dan mudah diurai; sisa makanan adalah jenis sampah terbanyak di Indonesia (±40%).</li><li>Pengurai (bakteri, jamur, cacing) bekerja bersama komponen abiotik (air, udara, suhu, tanah) mengubah sisa makanan menjadi unsur hara.</li><li>Sisa makanan yang menumpuk di TPA tanpa udara menghasilkan gas metana dan air lindi yang merusak ekosistem.</li><li>Sisa makanan berkaitan dengan kesehatan, kemiskinan, dan hilangnya keanekaragaman hayati.</li></ul><div class="rk-f">🪱 Kompi: "Hebat! Kamu sudah menyelesaikan Bab 1."</div></div>
+      <h3>Fakta Sampah Makanan di Indonesia</h3>
+    <div class="fig" data-fig="infografis"></div>
+    <div class="rangkuman"><div class="rk-h"><span>📌</span>Rangkuman Bab 1</div><ul><li>Sampah organik berasal dari makhluk hidup dan mudah diurai; sisa makanan adalah jenis sampah terbanyak di Indonesia (±40%).</li><li>Pengurai (bakteri, jamur, cacing) bekerja bersama komponen abiotik (air, udara, suhu, tanah) mengubah sisa makanan menjadi unsur hara.</li><li>Sisa makanan yang menumpuk di TPA tanpa udara menghasilkan gas metana dan air lindi yang merusak ekosistem.</li><li>Sisa makanan berkaitan dengan kesehatan, kemiskinan, dan hilangnya keanekaragaman hayati.</li></ul><div class="rk-f">🪱 Kompi: "Hebat! Kamu sudah menyelesaikan Bab 1."</div></div>
+    <div class="box act"><div class="bt">✋ Ayo Mencoba: Poster Peduli Sisa Makanan</div><p>Bersama kelompokmu, buatlah poster sederhana di kertas gambar tentang bahaya sampah sisa makanan bagi lingkungan. Gunakan minimal satu fakta dari infografis di atas, gambar yang menarik, dan satu ajakan singkat. Tempelkan posternya di kantin atau dekat tempat cuci tangan sekolah.</p></div>
+    <div class="box act"><div class="bt">✋ Ayo Mengamati: Sisa Makanan Kelasku</div><p>Selama satu minggu, amati sisa makanan di kelasmu setelah makan siang. Beri tanda ✓ pada jenis sisa makanan yang paling banyak tersisa setiap hari, lalu diskusikan penyebabnya.</p>
+    <table class="t lk"><tr><th>Hari</th><th>Nasi</th><th>Sayur</th><th>Lauk</th><th>Buah</th><th>Dugaan penyebab</th></tr><tr><td>Senin</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Selasa</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Rabu</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Kamis</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>Jumat</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></div>
     <div class="box think refleksi"><div class="bt">🪞 Ayo Refleksi</div><p>Beri tanda centang pada pernyataan yang sudah kamu kuasai.</p><label class="rf"><input type="checkbox"> Saya dapat membedakan sampah organik dan anorganik.</label><label class="rf"><input type="checkbox"> Saya dapat menjelaskan peran pengurai dan komponen abiotik.</label><label class="rf"><input type="checkbox"> Saya dapat menyebutkan dampak sampah makanan bagi kesehatan dan lingkungan.</label><p style="margin-top:8px">Bagian yang masih sulit bagiku: ......................................................</p></div>
   </section>
 <section class="sec opener" id="bab2" data-title="Bab 2. Upaya Penghematan Energi" data-theme="b2">
@@ -1074,9 +1064,11 @@ body{background:#f4efe3}
       
       <p>Setiap makanan yang sampai ke piringmu sudah menghabiskan energi: bahan bakar traktor, listrik penggilingan, bensin truk pengangkut, dan gas untuk memasak. Jika makanan itu dibuang, semua energi tersebut ikut terbuang, lalu diperlukan energi lagi untuk mengangkut sampahnya ke TPA. Karena itu, <b>mengurangi dan mengolah sisa makanan adalah bagian dari penghematan energi</b>.</p>
       <div class="chat"><div class="av" data-av="bima"></div><div class="bubble"><b>Bima</b>Berarti kalau aku menghabiskan makananku, aku juga ikut menghemat energi? Keren!</div></div>
+      <p class="label" style="margin-top:18px">Bagan Konsep</p>
+      <div class="fig" data-fig="peta2"></div>
     
 </section>
-<section class="sec" id="b2a" data-title="2a. Potensi untuk Pembangunan Berkelanjutan" data-theme="b2">
+<section class="sec brk" id="b2a" data-title="2a. Potensi untuk Pembangunan Berkelanjutan" data-theme="b2">
     <div class="sh"><p class="kicker">Bab 2 · Subbab a</p>
     <h2>Potensi Masalah Sampah Makanan untuk Pembangunan Berkelanjutan</h2>
     <div class="ill" data-ill="b2a"></div></div>
@@ -1091,9 +1083,10 @@ body{background:#f4efe3}
       <tr><td>💼 Lapangan kerja</td><td>Bank sampah, usaha kompos, dan budidaya maggot membuka peluang usaha bagi masyarakat.</td></tr>
       <tr><td>🌍 Mitigasi perubahan iklim</td><td>Mengolah sisa makanan mencegah metana terbentuk di TPA sehingga emisi gas rumah kaca berkurang.</td></tr>
     </table>
+    <div class="box act"><div class="bt">✋ Ayo Mencoba: Membuat Eco Enzyme</div><p><b>Bahan:</b> 3 bagian kulit buah dan sisa sayur segar, 1 bagian gula merah, 10 bagian air, botol plastik bekas bertutup.</p><ol><li>Potong kecil kulit buah dan sisa sayur.</li><li>Masukkan air dan gula merah ke dalam botol, aduk hingga larut.</li><li>Masukkan potongan kulit buah dan sayur, sisakan ruang kosong di bagian atas botol.</li><li>Tutup botol dan simpan di tempat teduh. Buka tutupnya sebentar setiap hari pada minggu pertama agar gas keluar.</li><li>Setelah ± 3 bulan, saring cairannya. Eco enzyme dapat dipakai sebagai cairan pembersih atau dicampur air untuk menyiram tanaman.</li></ol><p class="cap" style="text-align:left">Lakukan bersama guru atau orang tua.</p></div>
     <div class="box info"><div class="bt">🪱 Tahukah Kamu?</div><p>Pemerintah memasukkan pengelolaan susut dan sisa pangan ke dalam prioritas pembangunan rendah karbon dan ekonomi sirkular. Sekolah dapat ikut berperan dengan menjadi "sekolah tanpa sisa makanan".</p></div>
   </section>
-<section class="sec" id="b2b" data-title="2b. Solusi Penanganan Sampah Sisa Makanan" data-theme="b2">
+<section class="sec brk" id="b2b" data-title="2b. Solusi Penanganan Sampah Sisa Makanan" data-theme="b2">
     <div class="sh"><p class="kicker">Bab 2 · Subbab b</p>
     <h2>Solusi Penanganan Sampah Sisa Makanan</h2>
     <div class="ill" data-ill="b2b"></div></div>
@@ -1116,8 +1109,10 @@ body{background:#f4efe3}
     <h3>Energi Alternatif dari Sumber Daya Sekitar</h3>
     <p>Selain dari sisa makanan, sekolah dan rumah dapat memanfaatkan sumber energi alternatif: <b>energi matahari</b> (panel surya, menjemur pakaian/bahan tanpa mesin), <b>biogas</b> dari kotoran ternak dan sisa makanan, serta <b>energi angin dan air</b> untuk daerah tertentu. Energi alternatif ini terbarukan dan lebih rendah emisi dibanding bahan bakar fosil.</p>
     <div class="box act"><div class="bt">✋ Ayo Mencoba (Diskusi Kelompok)</div><p>Rancanglah satu upaya penghematan energi dan pemanfaatan energi alternatif di sekolahmu yang berhubungan dengan sisa makanan. Gunakan format: <b>Masalah – Ide solusi – Alat & bahan – Langkah – Manfaat energi/lingkungan</b>. Pastikan idenya logis dan realistis untuk dilakukan.</p></div>
+    <div class="box info"><div class="bt">🪱 Tahukah Kamu?</div><p>Banyak sekolah dan kampung di Indonesia memiliki <b>bank sampah</b>. Warga menabung sampah yang sudah dipilah, lalu sampah itu ditimbang dan dicatat seperti tabungan. Sisa makanan dapat diolah menjadi kompos atau pakan maggot, sedangkan plastik dan kertas dijual untuk didaur ulang.</p></div>
+    <div class="box think"><div class="bt">💭 Ayo Berpikir</div><ol><li>Mengapa mencegah sisa makanan lebih baik daripada mengolahnya menjadi kompos?</li><li>Dari kelima urutan penanganan, mana yang sudah dilakukan di sekolahmu?</li></ol></div>
   </section>
-<section class="sec" id="b2c" data-title="2c. Langkah Membuat Pupuk Kompos" data-theme="b2">
+<section class="sec brk" id="b2c" data-title="2c. Langkah Membuat Pupuk Kompos" data-theme="b2">
     <div class="sh"><p class="kicker">Bab 2 · Subbab c</p>
     <h2>Langkah-langkah Pembuatan Pupuk dari Sampah Sisa Makanan</h2>
     <div class="ill" data-ill="b2c"></div></div>
@@ -1154,9 +1149,9 @@ body{background:#f4efe3}
     </table>
     <div class="video" data-src="video/bab2c-kompos.mp4" data-ic="🪱" data-lab="Bab 2 · Subbab c" data-yt="CRg_uT-JUIA" data-short="1" data-title="Video: Membuat Pupuk Kompos dari Sisa Makanan" data-q="membuat kompos sisa makanan"></div>
     <div class="box think"><div class="bt">💭 Ayo Membandingkan</div><p>Bandingkan cara membuat kompos pada video dengan langkah kerja di buku ini. Langkah apa yang sama? Adakah alat, bahan, atau cara berbeda yang dapat kamu terapkan di komposter kelasmu?</p></div>
-    <div class="box act"><div class="bt">✋ Proyek Kelompok: Komposter Kelas</div><p>Buatlah komposter dari sisa makanan MBG kelasmu. Catat setiap minggu: berat bahan yang dimasukkan, suhu (hangat/dingin), bau, warna, dan hewan yang ditemukan. Hasil pengamatan ini akan kamu tulis menjadi <b>teks laporan hasil pengamatan</b> pada Bab 4.</p></div>
+    <div class="box act"><div class="bt">✋ Proyek Kelompok: Komposter Kelas</div><p>Buatlah komposter dari sisa makanan MBG kelasmu. Catat setiap minggu: berat bahan yang dimasukkan, suhu (hangat/dingin), bau, warna, dan hewan yang ditemukan. Presentasikan hasil pengamatan kelompokmu di depan kelas.</p></div>
   </section>
-<section class="sec" id="b2d" data-title="2d. Manfaat Kompos untuk Tanaman" data-theme="b2">
+<section class="sec brk" id="b2d" data-title="2d. Manfaat Kompos untuk Tanaman" data-theme="b2">
     <div class="sh"><p class="kicker">Bab 2 · Subbab d</p>
     <h2>Manfaat Pupuk Kompos untuk Menyuburkan Tanaman</h2>
     <div class="ill" data-ill="b2d"></div></div>
@@ -1179,7 +1174,7 @@ body{background:#f4efe3}
     </table>
     <div class="box act"><div class="bt">✋ Ayo Mencoba: Uji Kompos</div><p>Tanam biji kacang hijau pada dua pot. Pot A berisi tanah biasa, pot B berisi campuran tanah dan kompos (3:1). Siram dengan jumlah air yang sama. Ukur tinggi tanaman setiap 2 hari selama 2 minggu dan bandingkan hasilnya dalam tabel dan grafik.</p></div>
   </section>
-<section class="sec" id="b2e" data-title="2e. Manfaat Kompos di Bidang Ekonomi" data-theme="b2">
+<section class="sec brk" id="b2e" data-title="2e. Manfaat Kompos di Bidang Ekonomi" data-theme="b2">
     <div class="sh"><p class="kicker">Bab 2 · Subbab e</p>
     <h2>Manfaat Pupuk Kompos dalam Bidang Ekonomi</h2>
     <div class="ill" data-ill="b2e"></div></div>
@@ -1197,7 +1192,7 @@ body{background:#f4efe3}
       <p class="cap" style="text-align:left">Angka di atas adalah contoh perhitungan. Harga kompos sebenarnya bergantung pada kualitas dan daerah.</p></div>
     <div class="box think"><div class="bt">💭 Ayo Berpikir</div><p>Jika kelasmu bisa menjual kompos, bagaimana cara memasarkannya? Buat rancangan nama produk, kemasan, dan harga jual.</p></div>
   </section>
-<section class="sec" id="b2f" data-title="2f. Perilaku Ramah Lingkungan" data-theme="b2">
+<section class="sec brk" id="b2f" data-title="2f. Perilaku Ramah Lingkungan" data-theme="b2">
     <div class="sh"><p class="kicker">Bab 2 · Subbab f</p>
     <h2>Perilaku Ramah Lingkungan</h2>
     <div class="ill" data-ill="b2f"></div></div>
@@ -1215,187 +1210,14 @@ body{background:#f4efe3}
       <div id="habit"></div>
     </div>
       <div class="rangkuman"><div class="rk-h"><span>📌</span>Rangkuman Bab 2</div><ul><li>Sisa makanan berpotensi menjadi kompos, biogas, pakan maggot, dan eco enzyme (ekonomi sirkular).</li><li>Urutan penanganan terbaik: cegah → donasikan → pakan → kompos/biogas → TPA.</li><li>Kompos dibuat dengan memilah, mencacah, mencampur bahan cokelat : hijau = 2 : 1, menjaga kelembapan, dan mengaduk rutin selama 4–8 minggu.</li><li>Kompos menyuburkan tanah, menghemat biaya, dan dapat dijual; perilaku ramah lingkungan menghemat energi setiap hari.</li></ul><div class="rk-f">🪱 Kompi: "Hebat! Kamu sudah menyelesaikan Bab 2."</div></div>
+    <h3>Tabel Hasil Uji Kompos</h3>
+    <table class="t lk"><tr><th>Hari ke-</th><th>Tinggi tanaman pot A (cm)</th><th>Tinggi tanaman pot B (cm)</th><th>Catatan</th></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>8</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>10</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>12</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>14</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+    <p class="cap" style="text-align:left">Pot A: tanah biasa. Pot B: tanah + kompos (3 : 1). Tanaman mana yang tumbuh lebih baik?</p>
+    <h3>Lembar Pengamatan Komposter Kelas</h3>
+    <table class="t lk"><tr><th>Minggu ke-</th><th>Berat bahan (kg)</th><th>Suhu (hangat/dingin)</th><th>Bau</th><th>Warna</th><th>Hewan yang ditemukan</th></tr><tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>5</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+    <p class="cap" style="text-align:left">Isi setiap minggu bersama kelompokmu. Bandingkan hasilnya dengan ciri kompos matang.</p>
+    <div class="box think refleksi"><div class="bt">🪞 Ayo Refleksi</div><p>Beri tanda centang pada pernyataan yang sudah kamu kuasai.</p><label class="rf"><input type="checkbox"> Saya dapat menyebutkan potensi sampah makanan untuk pembangunan berkelanjutan.</label><label class="rf"><input type="checkbox"> Saya dapat menjelaskan langkah membuat pupuk kompos.</label><label class="rf"><input type="checkbox"> Saya dapat menyebutkan manfaat kompos bagi tanaman dan ekonomi.</label><label class="rf"><input type="checkbox"> Saya sudah mencoba satu perilaku ramah lingkungan minggu ini.</label><p style="margin-top:8px">Bagian yang masih sulit bagiku: ......................................................</p></div>
     <div class="box think refleksi"><div class="bt">🪞 Ayo Refleksi</div><p>Beri tanda centang pada pernyataan yang sudah kamu kuasai.</p><label class="rf"><input type="checkbox"> Saya dapat menyebutkan potensi sampah makanan untuk pembangunan berkelanjutan.</label><label class="rf"><input type="checkbox"> Saya dapat menjelaskan langkah membuat pupuk kompos.</label><label class="rf"><input type="checkbox"> Saya sudah mencoba satu perilaku ramah lingkungan minggu ini.</label><p style="margin-top:8px">Bagian yang masih sulit bagiku: ......................................................</p></div>
-  </section>
-<section class="sec opener" id="bab3" data-title="Bab 3. Operasi Hitung" data-theme="b3">
-<div class="op-num">03</div>
-<p class="op-kick">Bab 3 · Matematika</p>
-<h2 class="op-title">Operasi Hitung: Proporsi Sampah Sisa Makanan</h2>
-<p class="op-tag">Angka membantu kita melihat masalah dengan jelas. Timbang, bandingkan, lalu hitung berapa kompos yang bisa kita hasilkan!</p>
-<div class="op-grid"><div class="mini-cover" data-cover="b3"></div><div class="op-meta"><p class="label">Subbab</p><p>a. Menghitung proporsi jumlah sampah</p><p>b. Pengolahan sisa makanan menjadi kompos</p><p class="label">Tujuan Pembelajaran</p><p>Matematika 1.1 dan 1.2</p></div></div>
-</section>
-<section class="sec" id="bab3x" data-title="Bab 3. Operasi Hitung" data-theme="b3">
-<p class="kicker">Bab 3 · Matematika</p>
-<h2>Pengantar</h2>
-
-      
-      <p>Bima mencatat sisa makanan kelasnya selama satu minggu. Data itu dapat digunakan untuk membandingkan jenis sampah, menghitung persentase, memprediksi jumlah sampah satu sekolah, hingga memperkirakan jumlah kompos yang dihasilkan. Semua itu menggunakan <b>perbandingan (rasio)</b>, <b>rasio satuan</b>, dan <b>proporsi</b>.</p>
-      <div class="chat"><div class="av" data-av="bima"></div><div class="bubble"><b>Bima</b>Siapkan timbangan dan buku catatan. Kita jadi peneliti sampah!</div></div>
-    
-</section>
-<section class="sec" id="b3a" data-title="3a. Menghitung Proporsi Jumlah Sampah" data-theme="b3">
-    <div class="sh"><p class="kicker">Bab 3 · Subbab a</p>
-    <h2>Menghitung Proporsi Jumlah Sampah</h2>
-    <div class="ill" data-ill="b3a"></div></div>
-    <h3>1. Perbandingan (Rasio)</h3>
-    <p><b>Perbandingan</b> atau rasio membandingkan dua besaran yang sejenis, ditulis <b>a : b</b> atau <sup>a</sup>/<sub>b</sub>, dan disederhanakan dengan membagi kedua bilangan dengan FPB-nya.</p>
-    <p>Data sisa makanan kelas V selama 5 hari:</p>
-    <table class="t">
-      <tr><th>Jenis sisa makanan</th><th>Berat (kg)</th><th>Persentase</th></tr>
-      <tr><td>Nasi</td><td>12</td><td>40%</td></tr>
-      <tr><td>Sayur</td><td>9</td><td>30%</td></tr>
-      <tr><td>Kulit buah</td><td>6</td><td>20%</td></tr>
-      <tr><td>Lauk</td><td>3</td><td>10%</td></tr>
-      <tr><th>Jumlah</th><th>30</th><th>100%</th></tr>
-    </table>
-    <p>Contoh:</p>
-    <ul>
-      <li>Perbandingan sisa nasi dan sayur = 12 : 9 = <b>4 : 3</b> (dibagi 3).</li>
-      <li>Perbandingan sisa lauk dan seluruh sisa makanan = 3 : 30 = <b>1 : 10</b>.</li>
-      <li>Persentase sisa nasi = <sup>12</sup>/<sub>30</sub> × 100% = <b>40%</b>.</li>
-    </ul>
-    <h3>2. Rasio Satuan</h3>
-    <p><b>Rasio satuan</b> adalah perbandingan untuk <b>satu</b> satuan, misalnya "per murid" atau "per hari". Cara menghitungnya dengan <b>pembagian</b>.</p>
-    <p>Contoh: 30 kg sisa makanan dihasilkan oleh 30 murid dalam 5 hari.</p>
-    <ul><li>Sisa per hari = 30 kg ÷ 5 = <b>6 kg/hari</b>.</li><li>Sisa per murid per hari = 6 kg ÷ 30 = 0,2 kg = <b>200 gram/murid/hari</b>.</li></ul>
-    <h3>3. Proporsi</h3>
-    <p><b>Proporsi</b> adalah kesamaan dua perbandingan. Jika satu besaran bertambah, besaran lainnya juga bertambah dengan perbandingan tetap (<b>perbandingan senilai</b>). Cara menghitung: cari rasio satuan, lalu <b>kalikan</b>.</p>
-    <p>Contoh: Jika setiap murid menyisakan 200 g per hari, berapa sisa makanan sekolah yang memiliki 600 murid dalam 1 hari?<br>600 × 200 g = 120.000 g = <b>120 kg per hari</b>. Dalam 20 hari sekolah: 120 × 20 = <b>2.400 kg (2,4 ton)</b>!</p>
-    <div class="fig" id="pieWrap"></div>
-    <div class="box act"><div class="bt">🧮 Kalkulator Proporsi Sampah Kelasku</div>
-      <p>Masukkan data hasil penimbangan kelasmu. Grafik dan perhitungan akan muncul otomatis.</p>
-      <div class="calc">
-        <div><label>Nasi (kg)</label><input class="in" type="number" step="0.1" id="c1" value="12"></div>
-        <div><label>Sayur (kg)</label><input class="in" type="number" step="0.1" id="c2" value="9"></div>
-        <div><label>Kulit buah (kg)</label><input class="in" type="number" step="0.1" id="c3" value="6"></div>
-        <div><label>Lauk (kg)</label><input class="in" type="number" step="0.1" id="c4" value="3"></div>
-        <div><label>Jumlah murid</label><input class="in" type="number" id="c5" value="30"></div>
-        <div><label>Jumlah hari</label><input class="in" type="number" id="c6" value="5"></div>
-        <div><label>Murid satu sekolah</label><input class="in" type="number" id="c7" value="600"></div>
-      </div>
-      <div class="out" id="cout"></div>
-    </div>
-  </section>
-<section class="sec" id="b3b" data-title="3b. Pengolahan Sisa Makanan Menjadi Kompos" data-theme="b3">
-    <div class="sh"><p class="kicker">Bab 3 · Subbab b</p>
-    <h2>Pengolahan Sampah Sisa Makanan Menjadi Pupuk Kompos</h2>
-    <div class="ill" data-ill="b3b"></div></div>
-    <p>Saat membuat kompos, kita juga menggunakan perbandingan dan proporsi, yaitu untuk menentukan campuran bahan, kebutuhan aktivator, dan perkiraan hasil kompos.</p>
-    <h3>1. Perbandingan Bahan Cokelat dan Hijau</h3>
-    <p>Perbandingan yang disarankan adalah <b>cokelat : hijau = 2 : 1</b>. Jika tersedia 6 kg sisa makanan (hijau), maka bahan cokelat yang dibutuhkan:<br><sup>2</sup>/<sub>1</sub> = <sup>x</sup>/<sub>6</sub> → x = 2 × 6 = <b>12 kg daun kering</b>. Total bahan = 6 + 12 = 18 kg.</p>
-    <h3>2. Kebutuhan Aktivator</h3>
-    <p>Aturan pakai: 1 tutup botol EM4 (± 10 mL) untuk 1 liter air, dan 1 liter larutan untuk 10 kg bahan. Untuk 18 kg bahan dibutuhkan 18 ÷ 10 = <b>1,8 liter larutan</b>, yaitu sekitar 18 mL EM4.</p>
-    <h3>3. Perkiraan Hasil Kompos</h3>
-    <p>Selama pengomposan, bahan menyusut karena air dan sebagian karbon menguap. Misalkan dari <b>3 kg</b> bahan dihasilkan <b>1 kg</b> kompos (perbandingan 3 : 1). Maka 18 kg bahan akan menghasilkan 18 ÷ 3 = <b>6 kg kompos</b>.</p>
-    <h3>4. Proporsi Penggunaan Kompos</h3>
-    <p>Campuran media tanam yang baik adalah tanah : kompos = <b>3 : 1</b>. Untuk satu pot berisi 4 kg media, kompos yang dibutuhkan = <sup>1</sup>/<sub>4</sub> × 4 kg = <b>1 kg</b>. Jadi, 6 kg kompos cukup untuk 6 pot.</p>
-    <div class="box act"><div class="bt">🧮 Kalkulator Kompos</div>
-      <div class="calc">
-        <div><label>Sisa makanan / bahan hijau (kg)</label><input class="in" type="number" step="0.5" id="k1" value="6"></div>
-        <div><label>Perbandingan cokelat : hijau</label><select id="k2"><option value="1">1 : 1</option><option value="2" selected>2 : 1</option><option value="3">3 : 1</option></select></div>
-        <div><label>Bahan menjadi kompos (bahan : kompos)</label><select id="k3"><option value="2">2 : 1</option><option value="3" selected>3 : 1</option><option value="4">4 : 1</option></select></div>
-        <div><label>Harga kompos per kg (Rp)</label><input class="in" type="number" id="k4" value="5000"></div>
-      </div>
-      <div class="out" id="kout"></div>
-    </div>
-    <h3>Latihan</h3>
-    <details><summary>1. Sisa makanan kelas VI 15 kg dan kelas V 10 kg. Tentukan perbandingannya dalam bentuk paling sederhana.</summary><p>15 : 10 = <b>3 : 2</b> (dibagi 5).</p></details>
-    <details><summary>2. Komposter menghasilkan 4 kg kompos dari 12 kg bahan. Berapa kompos dari 45 kg bahan?</summary><p>Rasio = 12 : 4 = 3 : 1 → 45 ÷ 3 = <b>15 kg kompos</b>.</p></details>
-    <details><summary>3. Sebuah sekolah menghasilkan 84 kg sisa makanan dalam 6 hari. Berapa sisa makanan dalam 20 hari?</summary><p>Rasio satuan = 84 ÷ 6 = 14 kg/hari → 14 × 20 = <b>280 kg</b>.</p></details>
-    <details><summary>4. Dari 40 kg sampah kantin, 35% adalah sisa makanan. Berapa kg sisa makanan tersebut?</summary><p>35% × 40 = <sup>35</sup>/<sub>100</sub> × 40 = <b>14 kg</b>.</p></details>
-    <details><summary>5. Untuk 8 kg sisa makanan dibutuhkan 16 kg daun kering. Jika tersedia 30 kg daun kering, berapa sisa makanan yang dapat diolah?</summary><p>Perbandingan hijau : cokelat = 8 : 16 = 1 : 2 → 30 ÷ 2 = <b>15 kg</b>.</p></details>
-      <div class="rangkuman"><div class="rk-h"><span>📌</span>Rangkuman Bab 3</div><ul><li>Perbandingan (rasio) membandingkan dua besaran sejenis, misalnya nasi : sayur = 4 : 3.</li><li>Rasio satuan dihitung dengan pembagian, misalnya gram sisa makanan per murid per hari.</li><li>Proporsi (perbandingan senilai) dihitung dengan mengalikan rasio satuan.</li><li>Perbandingan dipakai untuk menentukan campuran kompos dan memperkirakan hasilnya.</li></ul><div class="rk-f">🪱 Kompi: "Hebat! Kamu sudah menyelesaikan Bab 3."</div></div>
-    <div class="box think refleksi"><div class="bt">🪞 Ayo Refleksi</div><p>Beri tanda centang pada pernyataan yang sudah kamu kuasai.</p><label class="rf"><input type="checkbox"> Saya dapat menentukan perbandingan paling sederhana.</label><label class="rf"><input type="checkbox"> Saya dapat menghitung rasio satuan.</label><label class="rf"><input type="checkbox"> Saya dapat menyelesaikan soal proporsi tentang kompos.</label><p style="margin-top:8px">Bagian yang masih sulit bagiku: ......................................................</p></div>
-  </section>
-<section class="sec opener" id="bab4" data-title="Bab 4. Teks Nonsastra" data-theme="b4">
-<div class="op-num">04</div>
-<p class="op-kick">Bab 4 · Bahasa Indonesia</p>
-<h2 class="op-title">Teks Nonsastra tentang Sampah Sisa Makanan</h2>
-<p class="op-tag">Saatnya menyuarakan perubahan. Baca infografis, tulis laporan pengamatan, dan ajak orang lain lewat teks persuasi.</p>
-<div class="op-grid"><div class="mini-cover" data-cover="b4"></div><div class="op-meta"><p class="label">Subbab</p><p>a. Contoh teks nonsastra tentang sampah sisa makanan</p><p>b. Teks persuasi ajakan bebas emisi</p><p class="label">Tujuan Pembelajaran</p><p>Bahasa Indonesia 1.1, 1.2, 2.1, 2.2</p></div></div>
-</section>
-<section class="sec" id="bab4x" data-title="Bab 4. Teks Nonsastra" data-theme="b4">
-<p class="kicker">Bab 4 · Bahasa Indonesia</p>
-<h2>Pengantar</h2>
-
-      
-      <p><b>Teks nonsastra</b> adalah teks yang isinya berdasarkan fakta, bersifat objektif, menggunakan bahasa baku dan denotatif (makna sebenarnya), serta bertujuan memberi informasi atau memengaruhi pembaca. Contohnya teks laporan, teks persuasi, berita, infografis, dan video dokumenter. Berbeda dengan teks sastra (cerpen, puisi, dongeng) yang bersifat imajinatif.</p>
-      <div class="chat"><div class="av" data-av="sari"></div><div class="bubble"><b>Bu Sari</b>Pengetahuan yang kalian dapat dari Bab 1–3 akan kita ubah menjadi tulisan yang bisa menggerakkan orang lain.</div></div>
-    
-</section>
-<section class="sec" id="b4a" data-title="4a. Contoh Teks Nonsastra" data-theme="b4">
-    <div class="sh"><p class="kicker">Bab 4 · Subbab a</p>
-    <h2>Contoh Teks Nonsastra tentang Sampah Sisa Makanan</h2>
-    <div class="ill" data-ill="b4a"></div></div>
-    <h3>1. Teks Visual: Infografis</h3>
-    <p>Infografis menyajikan fakta dan data dalam bentuk gambar, angka, dan teks singkat agar mudah dipahami. Amati infografis berikut.</p>
-    <div class="fig" data-fig="infografis"></div>
-    <div class="box think"><div class="bt">💭 Ayo Menganalisis Infografis</div><ol><li>Temukan tiga fakta berupa angka/data dalam infografis tersebut.</li><li>Bagaimana hubungan sampah makanan dengan emisi gas rumah kaca menurut infografis?</li><li>Nilai apa yang ingin disampaikan pembuat infografis: kepedulian lingkungan, tanggung jawab, atau keberlanjutan? Jelaskan alasanmu.</li></ol></div>
-    <h3>2. Teks Audiovisual: Video Dokumenter</h3>
-    <p>Tonton kembali video <a data-goto="b1d" style="color:var(--acc);font-weight:700;cursor:pointer">Bahaya Sampah Makanan pada Bab 1d ↗</a>. Saat menonton, catat: <b>(1)</b> masalah yang diangkat, <b>(2)</b> fakta/data yang disebutkan, <b>(3)</b> tokoh atau narasumber, dan <b>(4)</b> pesan atau nilai yang disampaikan.</p>
-    <h3>3. Teks Laporan Hasil Pengamatan</h3>
-    <p><b>Teks laporan hasil pengamatan</b> adalah teks yang memaparkan informasi tentang suatu objek berdasarkan hasil pengamatan secara objektif. Strukturnya:</p>
-    <table class="t">
-      <tr><th>Struktur</th><th>Isi</th></tr>
-      <tr><td>Judul</td><td>Nama objek atau kegiatan yang diamati</td></tr>
-      <tr><td>Pernyataan umum (klasifikasi)</td><td>Pengertian atau gambaran umum objek</td></tr>
-      <tr><td>Deskripsi bagian</td><td>Rincian hasil pengamatan: alat, bahan, langkah, dan hasil</td></tr>
-      <tr><td>Simpulan / penutup</td><td>Ringkasan hasil pengamatan</td></tr>
-    </table>
-    <h4 style="text-align:center;font-family:var(--serif);font-size:20px;font-weight:400">Pembuatan Pupuk Kompos dari Sisa Makanan di SD Tunas Hijau</h4>
-    <div class="struct"><div class="tagx">Pernyataan Umum</div><p>Kompos adalah pupuk organik yang dihasilkan dari penguraian bahan organik oleh mikroorganisme. Pupuk ini dapat dibuat dari sisa makanan yang selama ini dibuang ke tempat sampah sekolah.</p></div>
-    <div class="struct"><div class="tagx">Deskripsi Bagian</div>
-      <p>Pengamatan dilakukan oleh murid kelas V selama enam minggu, yaitu pada bulan Agustus hingga September 2026. Bahan yang digunakan adalah 6 kilogram sisa nasi dan sayur dari program makan bergizi gratis, 12 kilogram daun kering, serta 1,8 liter larutan EM4. Alat yang digunakan adalah ember bertutup yang telah dilubangi, pisau, sekop kecil, sarung tangan, dan termometer.</p>
-      <p>Pertama, sisa makanan dipilah agar tidak tercampur plastik dan tulang. Kemudian, sisa makanan dan daun kering dicacah menjadi potongan kecil. Setelah itu, bahan disusun berlapis di dalam ember dan diperciki larutan EM4 hingga lembap. Ember ditutup dan bahan diaduk setiap empat hari.</p>
-      <p>Pada minggu pertama, tumpukan bahan terasa hangat dengan suhu sekitar 45 °C dan muncul jamur berwarna putih. Pada minggu ketiga, volume bahan menyusut dan warnanya berubah menjadi cokelat tua. Pada minggu keenam, bahan telah berwarna cokelat kehitaman, bertekstur remah, dan berbau seperti tanah. Kompos yang dihasilkan seberat 6 kilogram.</p></div>
-    <div class="struct"><div class="tagx">Simpulan</div><p>Berdasarkan pengamatan tersebut, sisa makanan dapat diolah menjadi pupuk kompos dalam waktu sekitar enam minggu apabila dicampur dengan bahan kering, dijaga kelembapannya, dan diaduk secara teratur. Kegiatan ini dapat mengurangi sampah sekolah sekaligus menghasilkan pupuk untuk kebun sekolah.</p></div>
-    <div class="box info"><div class="bt">✏ Ciri Kebahasaan Teks Laporan</div><ul>
-      <li><b>Kalimat kompleks</b>: kalimat yang terdiri atas induk kalimat dan anak kalimat, ditandai konjungsi seperti <i>apabila, sehingga, karena, setelah, yang</i>. Contoh: <span class="hl">Bahan diaduk setiap empat hari <u>agar</u> udara dapat masuk ke dalam tumpukan.</span></li>
-      <li><b>Kosakata baku</b>: <i>kompos, mikroorganisme, kilogram, analisis</i> (bukan <i>kilo, analisa</i>).</li>
-      <li><b>Informasi faktual</b>: data berupa angka, waktu, dan ukuran yang dapat dibuktikan.</li>
-      <li><b>Konjungsi urutan</b>: <i>pertama, kemudian, setelah itu, akhirnya</i>.</li>
-      <li><b>Kata kerja pasif</b> untuk menjelaskan proses: <i>dipilah, dicacah, disusun, diaduk</i>.</li></ul></div>
-    <div class="box act"><div class="bt">✋ Ayo Menulis Teks Laporan</div><p>Tulislah teks laporan hasil pengamatan proyek komposter kelasmu (Bab 2). Gunakan struktur yang benar, kalimat kompleks, kosakata baku, dan data faktual. Tulisanmu tersimpan otomatis di perangkat ini.</p>
-      <textarea rows="10" data-save="laporan" placeholder="Judul: ...&#10;&#10;Pernyataan umum: ...&#10;&#10;Deskripsi bagian: ...&#10;&#10;Simpulan: ..."></textarea></div>
-  </section>
-<section class="sec" id="b4b" data-title="4b. Teks Persuasi Ajakan Bebas Emisi" data-theme="b4">
-    <div class="sh"><p class="kicker">Bab 4 · Subbab b</p>
-    <h2>Teks Persuasi Ajakan Bebas Emisi</h2>
-    <div class="ill" data-ill="b4b"></div></div>
-    <p><b>Teks persuasi</b> adalah teks yang bertujuan <b>mengajak atau membujuk</b> pembaca agar melakukan sesuatu, disertai alasan dan bukti yang logis. Teks persuasi dapat berupa poster, slogan, iklan layanan masyarakat, pidato, atau artikel ajakan.</p>
-    <h3>Struktur Teks Persuasi</h3>
-    <table class="t">
-      <tr><th>Struktur</th><th>Isi</th></tr>
-      <tr><td>Pengenalan isu</td><td>Menyampaikan masalah yang sedang terjadi</td></tr>
-      <tr><td>Rangkaian argumen</td><td>Alasan logis, fakta, dan data yang mendukung ajakan</td></tr>
-      <tr><td>Pernyataan ajakan</td><td>Inti ajakan yang ditujukan kepada pembaca</td></tr>
-      <tr><td>Penegasan kembali</td><td>Memperkuat ajakan pada bagian penutup</td></tr>
-    </table>
-    <h4 style="text-align:center;font-family:var(--serif);font-size:22px;font-weight:400">Habiskan Makananmu, Dinginkan Bumimu!</h4>
-    <div class="struct"><div class="tagx">Pengenalan Isu</div><p>Setiap hari, ompreng makan siang di sekolah kita masih menyisakan nasi, sayur, dan lauk. Sisa makanan tersebut dibuang ke tempat sampah, lalu diangkut ke tempat pemrosesan akhir. Tanpa kita sadari, kebiasaan kecil ini ikut memanaskan bumi.</p></div>
-    <div class="struct"><div class="tagx">Rangkaian Argumen</div>
-      <p>Sisa makanan merupakan jenis sampah terbanyak di Indonesia, yaitu hampir 40% dari seluruh sampah nasional. Ketika menumpuk di TPA tanpa udara, sisa makanan membusuk dan menghasilkan gas metana yang memerangkap panas jauh lebih kuat daripada karbon dioksida. Selain itu, makanan yang terbuang berarti air, pupuk, dan bahan bakar yang digunakan untuk menanam, memasak, dan mengangkutnya juga terbuang sia-sia.</p>
-      <p>Padahal, masih banyak orang yang kesulitan mendapatkan makanan bergizi. Jika kita mengambil makanan secukupnya dan menghabiskannya, kita menghemat energi sekaligus menghargai kerja keras petani dan juru masak.</p></div>
-    <div class="struct"><div class="tagx">Pernyataan Ajakan</div><p><b>Oleh karena itu, ayo kita mulai dari piring kita sendiri!</b> Mari ambil makanan secukupnya, habiskan setiap suapan, dan pilah sisa yang tidak dapat dimakan seperti kulit buah ke dalam komposter sekolah. Jangan biarkan sisa makanan berakhir di tempat sampah.</p></div>
-    <div class="struct"><div class="tagx">Penegasan Kembali</div><p>Bumi yang sejuk tidak hanya dijaga oleh orang dewasa. Setiap butir nasi yang kita habiskan adalah langkah kecil menuju sekolah bebas emisi. Habiskan makananmu, dinginkan bumimu!</p></div>
-    <div class="box info"><div class="bt">✏ Ciri Kebahasaan Teks Persuasi</div><ul>
-      <li><b>Kata ajakan</b>: <i>ayo, mari, marilah, sebaiknya, hendaknya</i>.</li>
-      <li><b>Kalimat perintah/larangan halus</b>: <i>Jangan biarkan ..., Ambillah secukupnya.</i></li>
-      <li><b>Konjungsi kausalitas</b>: <i>karena, sehingga, oleh karena itu, akibatnya</i>.</li>
-      <li><b>Kata teknis</b> sesuai topik: <i>emisi, metana, kompos, gas rumah kaca</i>.</li>
-      <li><b>Fakta dan data</b> untuk menguatkan alasan.</li>
-      <li>Bahasa yang <b>santun</b> dan meyakinkan, tidak memaksa atau menyinggung.</li></ul></div>
-    <h3>Contoh Slogan dan Poster Ajakan</h3>
-    <div class="grid">
-      <div class="tile"><div class="em">🍚</div><b>"Ambil Secukupnya, Habiskan Semuanya."</b></div>
-      <div class="tile"><div class="em">🌏</div><b>"Piring Bersih, Bumi Lestari."</b></div>
-      <div class="tile"><div class="em">🪱</div><b>"Sisa Kulit Buah? Kirim ke Kompi!"</b></div>
-      <div class="tile"><div class="em">❄</div><b>"Kurangi Sisa, Kurangi Emisi."</b></div>
-    </div>
-    <div class="box act"><div class="bt">✋ Ayo Menulis Teks Persuasi</div><p>Bersama kelompokmu, tulislah teks persuasi berisi ajakan mengurangi sampah makanan dan mendukung kampanye lingkungan rendah emisi. Gunakan minimal dua data dari buku digital ini sebagai alasan. Presentasikan di depan kelas dengan santun dan percaya diri.</p>
-      <textarea rows="10" data-save="persuasi" placeholder="Judul ajakan: ...&#10;&#10;Pengenalan isu: ...&#10;&#10;Argumen 1: ...&#10;Argumen 2: ...&#10;&#10;Pernyataan ajakan: ...&#10;&#10;Penegasan kembali: ..."></textarea>
-      <p class="cap" style="text-align:left">Daftar periksa: ☐ ada data/fakta ☐ ada kata ajakan ☐ ada konjungsi sebab-akibat ☐ bahasa santun ☐ struktur lengkap</p></div>
-      <div class="rangkuman"><div class="rk-h"><span>📌</span>Rangkuman Bab 4</div><ul><li>Teks nonsastra berisi fakta, bersifat objektif, dan memakai bahasa baku.</li><li>Teks laporan hasil pengamatan: pernyataan umum → deskripsi bagian → simpulan.</li><li>Teks persuasi: pengenalan isu → argumen → ajakan → penegasan kembali.</li><li>Gunakan data, kata ajakan, dan bahasa santun agar ajakan meyakinkan.</li></ul><div class="rk-f">🪱 Kompi: "Hebat! Kamu sudah menyelesaikan Bab 4."</div></div>
   </section>
 <section class="sec" id="evaluasi" data-title="Soal Evaluasi" data-theme="end">
     <div class="sh"><p class="kicker">Bagian Akhir</p>
@@ -1405,11 +1227,18 @@ body{background:#f4efe3}
     <div id="quiz"></div>
     <p><button class="btn-dark" id="qCheck">Periksa Jawaban</button> <button class="btn-dark" id="qReset" style="background:transparent;color:var(--ink);border:1px solid var(--line)">Ulangi</button></p>
     <div id="qScore"></div>
-    <h3>B. Uraian</h3>
+    <h3>B. Isian Singkat</h3>
+    <p>Lengkapilah kalimat berikut dengan jawaban yang tepat.</p>
+    <details><summary>1. Organisme yang menguraikan sisa makanan, seperti bakteri dan jamur, disebut ....</summary><p><b>Kunci:</b> pengurai (dekomposer)</p></details>
+    <details><summary>2. Penguraian sisa makanan tanpa oksigen menghasilkan gas rumah kaca bernama ....</summary><p><b>Kunci:</b> metana (CH₄)</p></details>
+    <details><summary>3. Sampah organik yang banyak mengandung air dan nitrogen disebut bahan ....</summary><p><b>Kunci:</b> hijau</p></details>
+    <details><summary>4. Kompos siap dipanen setelah kurang lebih ... minggu.</summary><p><b>Kunci:</b> 4–8 minggu</p></details>
+    <details><summary>5. Larva lalat Black Soldier Fly yang dapat memakan sisa makanan disebut ....</summary><p><b>Kunci:</b> maggot</p></details>
+    <h3>C. Uraian</h3>
     <details><summary>1. Jelaskan peran komponen biotik dan abiotik dalam penguraian sisa makanan!</summary><p><b>Kunci:</b> Biotik (bakteri, jamur, cacing, larva lalat) menguraikan sisa makanan menjadi zat sederhana dan unsur hara. Abiotik (air, udara/oksigen, suhu, tanah) menentukan kecepatan dan jenis penguraian: cukup air dan oksigen serta suhu hangat mempercepat penguraian aerob; tanpa oksigen terjadi penguraian anaerob yang menghasilkan metana dan bau.</p></details>
     <details><summary>2. Sekolahmu menghasilkan banyak sisa makanan MBG. Rancanglah upaya penanganan yang juga menghemat energi!</summary><p><b>Kunci (contoh):</b> pemilahan di kelas, kampanye "ambil secukupnya", penimbangan harian, pembuatan komposter/biogas sederhana, pemanfaatan kompos untuk kebun sekolah sehingga mengurangi pengangkutan sampah dan penggunaan pupuk kimia.</p></details>
-    <details><summary>3. Dari 24 kg sisa makanan, perbandingan nasi : sayur : lauk = 3 : 2 : 1. Hitung berat masing-masing!</summary><p><b>Kunci:</b> jumlah perbandingan = 6. Nasi = 3/6 × 24 = 12 kg; sayur = 2/6 × 24 = 8 kg; lauk = 1/6 × 24 = 4 kg.</p></details>
-    <details><summary>4. Tulislah satu paragraf persuasi (4–6 kalimat) yang mengajak teman mengurangi sisa makanan!</summary><p><b>Rubrik:</b> memuat isu (1), alasan logis dengan data (2), kata ajakan (1), bahasa santun dan baku (1). Skor maksimal 5.</p></details>
+    <details><summary>3. Jelaskan tiga manfaat pupuk kompos bagi tanaman dan lingkungan!</summary><p><b>Kunci:</b> menyediakan unsur hara (N, P, K) bagi tanaman; membuat tanah gembur dan mampu menyimpan air; mengurangi sampah yang dibuang ke TPA sehingga mengurangi gas metana dan pemakaian pupuk kimia.</p></details>
+    <details><summary>4. Sebutkan lima perilaku ramah lingkungan di sekolah untuk mengurangi sisa makanan dan menghemat energi!</summary><p><b>Kunci (contoh):</b> mengambil makanan secukupnya, menghabiskan makanan, memilah sisa makanan ke komposter, membawa botol minum sendiri, mematikan lampu/kipas saat kelas kosong, berjalan kaki atau bersepeda ke sekolah.</p></details>
   </section>
 <section class="sec" id="glosarium" data-title="Glosarium" data-theme="end">
     <div class="sh"><p class="kicker">Bagian Akhir</p>
@@ -1418,27 +1247,26 @@ body{background:#f4efe3}
     <input class="in" id="gq" placeholder="Cari istilah ..." style="max-width:320px;margin-bottom:18px">
     <dl class="gl" id="glList"></dl>
   </section>
-<section class="sec" id="pustaka" data-title="Daftar Pustaka" data-theme="end">
+<section class="sec brk" id="pustaka" data-title="Daftar Pustaka" data-theme="end">
     <div class="sh"><p class="kicker">Bagian Akhir</p>
     <h2>Daftar Pustaka</h2>
-    </div><ol style="line-height:1.9">
-      <li>Badan Standardisasi Nasional. (2004). <i>SNI 19-7030-2004 Spesifikasi Kompos dari Sampah Organik Domestik</i>. Jakarta: BSN.</li>
-      <li>FAO. (2011). <i>Global Food Losses and Food Waste: Extent, Causes and Prevention</i>. Rome: Food and Agriculture Organization of the United Nations.</li>
-      <li>Kementerian Lingkungan Hidup. (2025). <i>Sistem Informasi Pengelolaan Sampah Nasional (SIPSN): Komposisi Sampah Berdasarkan Jenis dan Sumber</i>. https://sipsn.menlhk.go.id</li>
-      <li>Kementerian PPN/Bappenas. (2021). <i>Kajian Food Loss and Waste di Indonesia dalam Rangka Mendukung Penerapan Ekonomi Sirkular dan Pembangunan Rendah Karbon</i>. Jakarta: Bappenas bersama Waste4Change, WRI Indonesia, dan UK FCDO.</li>
-      <li>Kemendikbudristek. (2021). <i>Ilmu Pengetahuan Alam dan Sosial untuk SD Kelas V</i>. Jakarta: Pusat Kurikulum dan Perbukuan.</li>
-      <li>Kemendikbudristek. (2021). <i>Bahasa Indonesia: Bergerak Bersama untuk SD Kelas V</i>. Jakarta: Pusat Kurikulum dan Perbukuan.</li>
-      <li>Kompas.com. (17 Januari 2025). Menteri Lingkungan Hidup: Limbah Makan Bergizi Gratis Akan Jadi Kompos.</li>
-      <li>Kompas.com. (28 Februari 2025). Dosen UNS Usul 4 Langkah Tangani Sampah Sisa Makanan dari Program MBG.</li>
+    </div><ol class="pustaka" style="line-height:1.5;font-size:.93em">
       <li>Antara. (2025). Masyarakat Diingatkan agar Habiskan Makanan guna Kurangi Food Waste.</li>
+      <li>Badan Standardisasi Nasional. (2004). <i>SNI 19-7030-2004 Spesifikasi Kompos dari Sampah Organik Domestik</i>. Jakarta: BSN.</li>
       <li>Bisnis.com. (10 Juni 2021). Limbah Makanan di Indonesia Sebabkan Kerugian Ekonomi Rp551 Triliun per Tahun.</li>
       <li>Bisnis.com. (16 Oktober 2025). Antisipasi Food Waste Program MBG, Berantas Masalah Sampah.</li>
+      <li>FAO. (2011). <i>Global Food Losses and Food Waste: Extent, Causes and Prevention</i>. Rome: Food and Agriculture Organization of the United Nations.</li>
+      <li>Kemendikbudristek. (2021). <i>Ilmu Pengetahuan Alam dan Sosial untuk SD Kelas V</i>. Jakarta: Pusat Kurikulum dan Perbukuan.</li>
+      <li>Kementerian Lingkungan Hidup. (2025). <i>Sistem Informasi Pengelolaan Sampah Nasional (SIPSN): Komposisi Sampah Berdasarkan Jenis dan Sumber</i>. https://sipsn.menlhk.go.id</li>
+      <li>Kementerian PPN/Bappenas. (2021). <i>Kajian Food Loss and Waste di Indonesia dalam Rangka Mendukung Penerapan Ekonomi Sirkular dan Pembangunan Rendah Karbon</i>. Jakarta: Bappenas bersama Waste4Change, WRI Indonesia, dan UK FCDO.</li>
+      <li>Kompas.com. (17 Januari 2025). Menteri Lingkungan Hidup: Limbah Makan Bergizi Gratis Akan Jadi Kompos.</li>
+      <li>Kompas.com. (28 Februari 2025). Dosen UNS Usul 4 Langkah Tangani Sampah Sisa Makanan dari Program MBG.</li>
       <li>Poltekkes Tanjungkarang. (2025). <i>Gambaran Faktor Penyebab Sisa Makanan Program Makanan Bergizi Gratis (MBG) pada Siswa Kelas III di SDN 1 Haduyang Lampung Selatan</i>. Repositori Poltekkes Tanjungkarang.</li>
       <li>Popmama.com. (2025). Kreatif! Sisa Makanan MBG Diolah Jadi Eco Enzyme di SMAN 7 Manado.</li>
       <li>Republik Indonesia. (2008). <i>Undang-Undang Nomor 18 Tahun 2008 tentang Pengelolaan Sampah</i>.</li>
       <li>UNEP. (2024). <i>Food Waste Index Report 2024</i>. Nairobi: United Nations Environment Programme.</li>
-      <li>YouTube. Video pembuatan pupuk kompos dari sisa makanan. https://youtube.com/shorts/CRg_uT-JUIA</li>
       <li>YouTube. Video bahaya sampah makanan. https://youtu.be/X2oMo3Q8Tek</li>
+      <li>YouTube. Video pembuatan pupuk kompos dari sisa makanan. https://youtube.com/shorts/CRg_uT-JUIA</li>
     </ol>
   </section>
         <span id="endMark"></span>
@@ -1479,7 +1307,7 @@ $$('[data-av]').forEach(e=>e.innerHTML=AV[e.dataset.av]||'');
 
 /* COVERS */
 const CV={
- main:{c1:'#1f3d27',c2:'#3d7a4c',t:'Pupuk dari',t2:'Sampah Makanan',s:'IPAS · MATEMATIKA · BAHASA INDONESIA',ill:'leaf'},
+ main:{c1:'#1f3d27',c2:'#3d7a4c',t:'Pupuk dari',t2:'Sampah Makanan',s:'ILMU PENGETAHUAN ALAM DAN SOSIAL',ill:'leaf'},
  pre:{c1:'#3a3a33',c2:'#6d6b5c',t:'Pupuk dari',t2:'Sampah Makanan',s:'BAGIAN AWAL',ill:'leaf'},
  b1:{c1:'#1f3d27',c2:'#2f5d3a',t:'Bab 1',t2:'Biotik & Abiotik',s:'EKOSISTEM DAN PENGURAI',ill:'worm'},
  b2:{c1:'#6b3a10',c2:'#a65d1c',t:'Bab 2',t2:'Hemat Energi',s:'KOMPOS DAN ENERGI ALTERNATIF',ill:'sun'},
@@ -1504,6 +1332,7 @@ const box=(x,y,w,h,fill,txt,sub,tc='#1f2328')=>`<rect x="${x}" y="${y}" width="$
 const arr=(x1,y1,x2,y2,c='#6b6a64')=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="2" marker-end="url(#ah)"/>`;
 const defs=`<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b6a64"/></marker></defs>`;
 F.peta1=`<svg viewBox="0 0 620 300">${defs}${box(220,10,180,50,'#2f5d3a','Sampah Sisa Makanan','',"#fff")}${box(10,110,180,56,'#d9ead9','a. Jenis sampah','organik')}${box(220,110,180,56,'#d9ead9','b. Sisa makanan','fakta & penyebab')}${box(430,110,180,56,'#d9ead9','c. Pengaruh','biotik · abiotik')}${box(120,220,380,60,'#f1e3c8','d. Kesehatan · Kemiskinan · Biodiversitas','')}${arr(280,60,100,108)}${arr(310,60,310,108)}${arr(340,60,520,108)}${arr(310,166,310,218)}${arr(520,166,430,218)}</svg><figcaption>Gambar 1.1 Bagan konsep Bab 1</figcaption>`;
+F.peta2=`<svg viewBox="0 0 620 330">${defs}${box(210,8,200,50,'#b4641e','Upaya Penghematan Energi','',"#fff")}${box(10,104,190,56,'#f8e9d6','a. Potensi','pembangunan berkelanjutan')}${box(215,104,190,56,'#f8e9d6','b. Solusi','penanganan sisa makanan')}${box(420,104,190,56,'#f8e9d6','c. Membuat kompos','langkah-langkah')}${box(10,226,190,56,'#e1efd6','d. Manfaat kompos','menyuburkan tanaman')}${box(215,226,190,56,'#e1efd6','e. Manfaat ekonomi','hemat & berpenghasilan')}${box(420,226,190,56,'#e1efd6','f. Ramah lingkungan','perilaku sehari-hari')}${arr(270,58,105,102)}${arr(310,58,310,102)}${arr(350,58,515,102)}${arr(515,160,105,224)}${arr(515,160,310,224)}${arr(515,160,515,224)}</svg><figcaption>Gambar 2.0 Bagan konsep Bab 2</figcaption>`;
 F.flw=`<svg viewBox="0 0 640 170">${defs}${['🌾 Produksi','🏭 Pascapanen & olah','🚚 Distribusi','🛒 Penjualan','🍽 Konsumsi'].map((t,i)=>box(8+i*126,40,112,54,i<3?'#f1e3c8':'#f1d6d6',t.split(' ')[0],t.split(' ').slice(1).join(' '))).join('')}${[0,1,2,3].map(i=>arr(120+i*126,67,132+i*126,67)).join('')}<rect x="8" y="112" width="364" height="34" rx="8" fill="#a65d1c" opacity=".15"/><text x="190" y="134" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#6b3a10">FOOD LOSS (susut pangan)</text><rect x="386" y="112" width="238" height="34" rx="8" fill="#7a3b52" opacity=".15"/><text x="505" y="134" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#4a2032">FOOD WASTE (sisa pangan)</text></svg><figcaption>Gambar 1.2 Perbedaan food loss dan food waste dalam rantai pangan</figcaption>`;
 F.komposisi=`<svg viewBox="0 0 620 170"><text x="0" y="20" font-size="13" font-weight="700" font-family="sans-serif" fill="currentColor">Komposisi sampah nasional berdasarkan jenis (SIPSN 2024)</text>${[['Sisa makanan',39.87,'#2f5d3a'],['Plastik',19.5,'#a65d1c'],['Jenis lain (kertas, kayu, logam, kain, kaca, karet, dll.)',40.63,'#b9b6a8']].map((d,i)=>`<text x="0" y="${58+i*42}" font-size="12" font-family="sans-serif" fill="currentColor">${d[0].length>14?d[0].slice(0,12)+'…':d[0]}</text><rect x="110" y="${44+i*42}" width="${d[1]*11}" height="22" rx="4" fill="${d[2]}"/><text x="${118+d[1]*11}" y="${60+i*42}" font-size="12" font-weight="700" font-family="sans-serif" fill="currentColor">${String(d[1]).replace('.',',')}%</text>`).join('')}</svg><figcaption>Gambar 1.3 Sisa makanan adalah jenis sampah terbanyak di Indonesia (sumber: SIPSN KLH, 2024)</figcaption>`;
 F.urai=`<svg viewBox="0 0 640 330">${defs}<circle cx="320" cy="165" r="62" fill="#e7dcc4"/><text x="320" y="160" text-anchor="middle" font-size="30">🍚</text><text x="320" y="190" text-anchor="middle" font-size="12" font-weight="700" font-family="sans-serif">Sisa makanan</text>${box(10,20,190,60,'#d9ead9','🦠 Bakteri & jamur','mengurai zat organik')}${box(10,130,190,60,'#d9ead9','🪱 Cacing tanah','menggemburkan tanah')}${box(10,240,190,60,'#d9ead9','🪰 Larva lalat / maggot','memotong sisa makanan')}${box(440,20,190,60,'#d6e2ee','💧 Air','kelembapan')}${box(440,130,190,60,'#d6e2ee','🌬 Udara (O₂)','aerob / anaerob')}${box(440,240,190,60,'#d6e2ee','🌡 Suhu & 🟫 Tanah','kecepatan urai')}${arr(200,50,262,130)}${arr(200,160,256,163)}${arr(200,270,262,200)}${arr(440,50,378,130)}${arr(440,160,384,163)}${arr(440,270,378,200)}<text x="105" y="322" text-anchor="middle" font-size="12" font-weight="700" fill="#2f5d3a" font-family="sans-serif">KOMPONEN BIOTIK</text><text x="535" y="322" text-anchor="middle" font-size="12" font-weight="700" fill="#2c4a6e" font-family="sans-serif">KOMPONEN ABIOTIK</text></svg><figcaption>Gambar 1.4 Hubungan komponen biotik dan abiotik dalam penguraian sisa makanan</figcaption>`;
@@ -1512,7 +1341,7 @@ F.tiga=`<svg viewBox="0 0 620 220">${defs}${box(220,80,180,60,'#2f5d3a','Sisa ma
 F.sirkular=`<svg viewBox="0 0 600 300">${defs}<circle cx="300" cy="150" r="110" fill="none" stroke="#a9d18e" stroke-width="16" opacity=".5"/>${[['🌾','Bertani',300,40],['🍽','Makan',410,150],['🗑','Sisa makanan',300,262],['🪱','Kompos / biogas',190,150]].map(d=>`<circle cx="${d[2]}" cy="${d[3]}" r="36" fill="#fbfaf5" stroke="#2f5d3a" stroke-width="2"/><text x="${d[2]}" y="${d[3]+4}" text-anchor="middle" font-size="24">${d[0]}</text><text x="${d[2]}" y="${d[3]+(d[3]>200?54:d[3]<60?-44:54)}" text-anchor="middle" font-size="12" font-weight="700" font-family="sans-serif" fill="currentColor">${d[1]}</text>`).join('')}<text x="300" y="155" text-anchor="middle" font-size="14" font-family="Georgia,serif" fill="#2f5d3a">Ekonomi Sirkular</text></svg><figcaption>Gambar 2.1 Sisa makanan kembali menjadi sumber daya dalam ekonomi sirkular</figcaption>`;
 F.hirarki=`<svg viewBox="0 0 620 300">${[['1. Cegah & kurangi','ambil secukupnya, rencanakan menu','#2f5d3a',600],['2. Donasikan','makanan berlebih yang masih layak','#3d7a4c',520],['3. Pakan ternak / maggot','sisa yang tidak layak dimakan manusia','#6b9a5a',440],['4. Kompos / biogas / eco enzyme','olah menjadi pupuk dan energi','#a65d1c',360],['5. Buang ke TPA','pilihan terakhir','#7a3b52',280]].map((d,i)=>`<rect x="${(620-d[3])/2}" y="${8+i*58}" width="${d[3]}" height="50" rx="8" fill="${d[2]}"/><text x="310" y="${30+i*58}" text-anchor="middle" fill="#fff" font-weight="700" font-size="14" font-family="sans-serif">${d[0]}</text><text x="310" y="${47+i*58}" text-anchor="middle" fill="#fff" opacity=".85" font-size="11" font-family="sans-serif">${d[1]}</text>`).join('')}</svg><figcaption>Gambar 2.2 Urutan prioritas penanganan sisa makanan (paling atas paling baik)</figcaption>`;
 F.lapis=`<svg viewBox="0 0 600 280"><path d="M190 40h220l-20 220H210z" fill="#5a6b78"/><path d="M180 30h240v18H180z" fill="#46545e" rx="4"/>${[['#8a6a40','Bahan cokelat (daun kering)'],['#7fbf6a','Bahan hijau (sisa makanan)'],['#5a3d26','Tanah / kompos (starter)'],['#8a6a40','Bahan cokelat'],['#7fbf6a','Bahan hijau'],['#c9a66b','Sekam / dasar 5 cm']].map((d,i)=>`<rect x="${206+i*2}" y="${56+i*32}" width="${188-i*4}" height="30" fill="${d[0]}"/><text x="430" y="${76+i*32}" font-size="12" font-family="sans-serif" fill="currentColor">← ${d[1]}</text>`).join('')}<g fill="#fff" opacity=".7">${[0,1,2,3,4].map(i=>`<circle cx="196" cy="${80+i*40}" r="3"/><circle cx="404" cy="${80+i*40}" r="3"/>`).join('')}</g><text x="20" y="80" font-size="12" font-family="sans-serif" fill="currentColor">Lubang udara</text><text x="20" y="96" font-size="12" font-family="sans-serif" fill="currentColor">di sisi ember →</text><text x="20" y="200" font-size="13" font-weight="700" font-family="sans-serif" fill="#a65d1c">Cokelat : Hijau</text><text x="20" y="220" font-size="20" font-family="Georgia,serif" fill="#a65d1c">2 : 1</text></svg><figcaption>Gambar 2.3 Susunan lapisan bahan di dalam komposter ember</figcaption>`;
-F.infografis=`<svg viewBox="0 0 620 420"><rect width="620" height="420" rx="16" fill="#1f3d27"/><text x="310" y="44" text-anchor="middle" fill="#f4e7c2" font-family="Georgia,serif" font-size="24">Sisa Makanan &amp; Pemanasan Global</text><text x="310" y="66" text-anchor="middle" fill="#fff" opacity=".7" font-family="sans-serif" font-size="11" letter-spacing="1.5">FAKTA INDONESIA</text>${[['🗑','39,87%','sampah nasional adalah sisa makanan','SIPSN KLH 2024'],['⚖','23–48 juta ton','pangan terbuang per tahun (2000–2019)','Bappenas 2021'],['🔥','7,29%','emisi GRK Indonesia berasal dari pangan terbuang','Bappenas 2021'],['💸','Rp213–551 T','kerugian ekonomi per tahun','Bappenas 2021'],['🍛','61–125 juta','orang bisa diberi makan dari energi pangan terbuang','Bappenas 2021'],['🏠','50,8%','sampah berasal dari rumah tangga','SIPSN 2024']].map((d,i)=>{const x=24+(i%3)*196,y=92+Math.floor(i/3)*150;return `<rect x="${x}" y="${y}" width="180" height="134" rx="12" fill="#fff" opacity=".08"/><text x="${x+16}" y="${y+34}" font-size="24">${d[0]}</text><text x="${x+16}" y="${y+68}" fill="#f6c453" font-family="Georgia,serif" font-size="22">${d[1]}</text>${wrap(d[2],24).map((l,j)=>`<text x="${x+16}" y="${y+88+j*14}" fill="#fff" font-family="sans-serif" font-size="11">${l}</text>`).join('')}<text x="${x+16}" y="${y+124}" fill="#fff" opacity=".5" font-family="sans-serif" font-size="9">${d[3]}</text>`}).join('')}<text x="310" y="402" text-anchor="middle" fill="#a9d18e" font-family="sans-serif" font-size="13" font-weight="700">Ambil secukupnya · Habiskan · Kompos-kan sisanya</text></svg><figcaption>Gambar 4.1 Infografis hubungan sampah makanan dan emisi gas rumah kaca</figcaption>`;
+F.infografis=`<svg viewBox="0 0 620 420"><rect width="620" height="420" rx="16" fill="#1f3d27"/><text x="310" y="44" text-anchor="middle" fill="#f4e7c2" font-family="Georgia,serif" font-size="24">Sisa Makanan &amp; Pemanasan Global</text><text x="310" y="66" text-anchor="middle" fill="#fff" opacity=".7" font-family="sans-serif" font-size="11" letter-spacing="1.5">FAKTA INDONESIA</text>${[['🗑','39,87%','sampah nasional adalah sisa makanan','SIPSN KLH 2024'],['⚖','23–48 juta ton','pangan terbuang per tahun (2000–2019)','Bappenas 2021'],['🔥','7,29%','emisi GRK Indonesia berasal dari pangan terbuang','Bappenas 2021'],['💸','Rp213–551 T','kerugian ekonomi per tahun','Bappenas 2021'],['🍛','61–125 juta','orang bisa diberi makan dari energi pangan terbuang','Bappenas 2021'],['🏠','50,8%','sampah berasal dari rumah tangga','SIPSN 2024']].map((d,i)=>{const x=24+(i%3)*196,y=92+Math.floor(i/3)*150;return `<rect x="${x}" y="${y}" width="180" height="134" rx="12" fill="#fff" opacity=".08"/><text x="${x+16}" y="${y+34}" font-size="24">${d[0]}</text><text x="${x+16}" y="${y+68}" fill="#f6c453" font-family="Georgia,serif" font-size="22">${d[1]}</text>${wrap(d[2],24).map((l,j)=>`<text x="${x+16}" y="${y+88+j*14}" fill="#fff" font-family="sans-serif" font-size="11">${l}</text>`).join('')}<text x="${x+16}" y="${y+124}" fill="#fff" opacity=".5" font-family="sans-serif" font-size="9">${d[3]}</text>`}).join('')}<text x="310" y="402" text-anchor="middle" fill="#a9d18e" font-family="sans-serif" font-size="13" font-weight="700">Ambil secukupnya · Habiskan · Kompos-kan sisanya</text></svg><figcaption>Gambar 1.7 Infografis fakta sampah makanan dan emisi gas rumah kaca</figcaption>`;
 function wrap(s,n){const w=s.split(' '),o=[];let l='';w.forEach(x=>{if((l+' '+x).trim().length>n){o.push(l.trim());l=x}else l+=' '+x});o.push(l.trim());return o}
 $$('[data-fig]').forEach(e=>{e.innerHTML=F[e.dataset.fig]||'';});
 
@@ -1588,7 +1417,7 @@ function calc2(){
   const c=g*r,t=g+c,k=t/y;
   $('#kout').innerHTML=`Bahan cokelat dibutuhkan: <b>${fmt(c)} kg</b> (${r} × ${fmt(g)})<br>Total bahan: <b>${fmt(t)} kg</b><br>Larutan aktivator: <b>${fmt(t/10)} liter</b> (≈ ${fmt(t,0)} mL EM4)<br>Perkiraan kompos: <b>${fmt(k)} kg</b> (${fmt(t)} ÷ ${y})<br>Cukup untuk ± <b>${Math.floor(k)}</b> pot (1 kg kompos/pot) · Nilai jual ± <b>Rp${fmt(k*p,0)}</b>`;
 }
-$$('#c1,#c2,#c3,#c4,#c5,#c6,#c7').forEach(e=>e.oninput=calc1);$$('#k1,#k2,#k3,#k4').forEach(e=>e.oninput=e.onchange=calc2);calc1();calc2();
+if($('#c1')){$$('#c1,#c2,#c3,#c4,#c5,#c6,#c7').forEach(e=>e.oninput=calc1);$$('#k1,#k2,#k3,#k4').forEach(e=>e.oninput=e.onchange=calc2);calc1();calc2();}
 
 /* QUIZ */
 const QZ=[
@@ -1598,10 +1427,10 @@ const QZ=[
 ['Sisa makanan yang tertimbun di TPA tanpa udara menghasilkan gas ...',['oksigen','metana','nitrogen','helium'],1,'Penguraian anaerob menghasilkan metana (CH₄), gas rumah kaca.'],
 ['Urutan penanganan sisa makanan yang paling diutamakan adalah ...',['dibuang ke TPA','dibakar','dicegah dan dikurangi','dijadikan kompos'],2,'Mencegah sisa makanan adalah pilihan terbaik.'],
 ['Perbandingan bahan cokelat : hijau yang disarankan untuk kompos adalah ...',['1 : 3','2 : 1','1 : 4','5 : 1'],1,'Sekitar 2 bagian cokelat untuk 1 bagian hijau.'],
-['Sebuah kelas menghasilkan 8 kg sisa makanan dalam 4 hari. Dalam 20 hari dihasilkan ...',['32 kg','40 kg','80 kg','160 kg'],1,'8 ÷ 4 = 2 kg/hari; 2 × 20 = 40 kg.'],
-['Dari 12 kg bahan dihasilkan 4 kg kompos. Kompos dari 30 kg bahan adalah ...',['8 kg','10 kg','12 kg','15 kg'],1,'Rasio 3 : 1 → 30 ÷ 3 = 10 kg.'],
-['Kalimat yang merupakan kalimat ajakan adalah ...',['Sampah makanan menghasilkan metana.','Kompos dibuat dalam enam minggu.','Mari habiskan makanan kita untuk bumi!','Sisa nasi ditimbang setiap hari.'],2,'Kata "mari" menandai ajakan.'],
-['Struktur teks laporan hasil pengamatan yang tepat adalah ...',['orientasi – komplikasi – resolusi','pernyataan umum – deskripsi bagian – simpulan','tesis – argumen – penegasan','pembuka – isi – salam'],1,'Teks laporan terdiri atas pernyataan umum, deskripsi bagian, dan simpulan.']
+['Peran bakteri dan jamur dalam ekosistem adalah sebagai ...',['produsen','konsumen I','pengurai','predator'],2,'Bakteri dan jamur menguraikan sisa makhluk hidup.'],
+['Cairan hitam dari sampah membusuk yang mencemari air tanah disebut ...',['eco enzyme','air lindi','EM4','kompos cair'],1,'Air lindi meresap dan mencemari air tanah.'],
+['Hari Peduli Sampah Nasional diperingati setiap tanggal ...',['5 Juni','22 April','21 Februari','17 Agustus'],2,'Untuk mengenang longsor TPA Leuwigajah 21 Februari 2005.'],
+['Ciri kompos yang sudah matang adalah ...',['berbau busuk dan basah','berwarna cokelat kehitaman dan berbau tanah','masih panas sekali','bahan asal masih utuh'],1,'Kompos matang berwarna gelap, remah, dan berbau tanah.']
 ];
 const qz=$('#quiz');let ans=store.get('quiz',{});
 qz.innerHTML=QZ.map((q,i)=>`<div class="q" data-i="${i}"><p>${i+1}. ${q[0]}</p>${q[1].map((o,j)=>`<label><input type="radio" name="q${i}" value="${j}" ${ans[i]==j?'checked':''}> ${'ABCD'[j]}. ${o}</label>`).join('')}<div class="ex">💡 ${q[3]}</div></div>`).join('');
@@ -1611,8 +1440,8 @@ $('#qCheck').onclick=()=>{let s=0;$$('.q',qz).forEach(d=>{const i=+d.dataset.i,a
 $('#qReset').onclick=()=>{ans={};store.set('quiz',ans);$$('#quiz input').forEach(r=>r.checked=false);$$('.q',qz).forEach(d=>d.classList.remove('ok','no'));$('#qScore').innerHTML=''};
 
 /* GLOSARIUM */
-const GL=[['Abiotik','Komponen tak hidup dalam ekosistem, seperti air, tanah, udara, suhu, dan cahaya.'],['Aerob','Proses yang memerlukan oksigen.'],['Air lindi','Cairan hasil pembusukan sampah yang dapat mencemari tanah dan air.'],['Anaerob','Proses yang berlangsung tanpa oksigen.'],['Biodiversitas','Keanekaragaman makhluk hidup di suatu wilayah.'],['Biogas','Gas yang dihasilkan dari penguraian bahan organik tanpa oksigen, dapat digunakan sebagai bahan bakar.'],['Biotik','Komponen hidup dalam ekosistem: produsen, konsumen, dan pengurai.'],['Dekomposisi','Proses penguraian bahan organik menjadi zat yang lebih sederhana.'],['Dekomposer','Organisme pengurai, misalnya bakteri dan jamur.'],['Eco enzyme','Cairan hasil fermentasi sisa buah dan sayur dengan gula dan air.'],['Ekonomi sirkular','Sistem ekonomi yang memanfaatkan kembali sumber daya sehingga mengurangi sampah.'],['Ekosistem','Hubungan timbal balik antara makhluk hidup dan lingkungannya.'],['Emisi','Pelepasan gas atau zat ke udara.'],['EM4','Effective Microorganisms 4, cairan berisi mikroorganisme untuk mempercepat pengomposan.'],['Energi alternatif','Sumber energi pengganti bahan bakar fosil, misalnya matahari, angin, air, dan biogas.'],['Eutrofikasi','Ledakan pertumbuhan alga di perairan akibat kelebihan zat hara.'],['Food loss','Susut pangan; bahan pangan yang hilang sebelum sampai ke konsumen.'],['Food waste','Sisa pangan; makanan layak konsumsi yang dibuang.'],['Gas rumah kaca','Gas yang memerangkap panas di atmosfer, seperti CO₂ dan metana.'],['Infografis','Penyajian informasi dalam bentuk gambar, data, dan teks singkat.'],['Kalimat kompleks','Kalimat yang terdiri atas induk kalimat dan anak kalimat.'],['Kompos','Pupuk organik hasil penguraian bahan organik.'],['Maggot','Larva lalat Black Soldier Fly yang dapat mengurai sampah organik.'],['MBG','Makan Bergizi Gratis, program pemerintah penyediaan makanan bergizi bagi murid.'],['Metana (CH₄)','Gas rumah kaca hasil penguraian anaerob yang memerangkap panas lebih kuat daripada CO₂.'],['Mitigasi','Upaya mengurangi penyebab atau dampak suatu masalah, misalnya perubahan iklim.'],['Perbandingan (rasio)','Cara membandingkan dua besaran sejenis, ditulis a : b.'],['Perubahan iklim','Perubahan pola cuaca jangka panjang, salah satunya akibat pemanasan global.'],['Proporsi','Kesamaan dua perbandingan.'],['Rasio satuan','Perbandingan untuk satu satuan, misalnya kg per murid.'],['SIPSN','Sistem Informasi Pengelolaan Sampah Nasional milik Kementerian Lingkungan Hidup.'],['Teks nonsastra','Teks berdasarkan fakta yang bersifat objektif dan informatif.'],['Teks persuasi','Teks yang bertujuan mengajak atau membujuk pembaca.'],['TPA','Tempat Pemrosesan Akhir sampah.'],['Unsur hara','Zat makanan yang dibutuhkan tanaman, seperti nitrogen, fosfor, dan kalium.']];
-const gl=v=>$('#glList').innerHTML=GL.filter(g=>(g[0]+g[1]).toLowerCase().includes(v.toLowerCase())).map(g=>`<dt>${g[0]}</dt><dd>${g[1]}</dd>`).join('');
+const GL=[['Abiotik','Komponen tak hidup dalam ekosistem, seperti air, tanah, udara, suhu, dan cahaya.'],['Aerob','Proses yang memerlukan oksigen.'],['Air lindi','Cairan hasil pembusukan sampah yang dapat mencemari tanah dan air.'],['Anaerob','Proses yang berlangsung tanpa oksigen.'],['Biodiversitas','Keanekaragaman makhluk hidup di suatu wilayah.'],['Biogas','Gas yang dihasilkan dari penguraian bahan organik tanpa oksigen, dapat digunakan sebagai bahan bakar.'],['Biotik','Komponen hidup dalam ekosistem: produsen, konsumen, dan pengurai.'],['Dekomposisi','Proses penguraian bahan organik menjadi zat yang lebih sederhana.'],['Dekomposer','Organisme pengurai, misalnya bakteri dan jamur.'],['Eco enzyme','Cairan hasil fermentasi sisa buah dan sayur dengan gula dan air.'],['Ekonomi sirkular','Sistem ekonomi yang memanfaatkan kembali sumber daya sehingga mengurangi sampah.'],['Ekosistem','Hubungan timbal balik antara makhluk hidup dan lingkungannya.'],['Emisi','Pelepasan gas atau zat ke udara.'],['EM4','Effective Microorganisms 4, cairan berisi mikroorganisme untuk mempercepat pengomposan.'],['Energi alternatif','Sumber energi pengganti bahan bakar fosil, misalnya matahari, angin, air, dan biogas.'],['Eutrofikasi','Ledakan pertumbuhan alga di perairan akibat kelebihan zat hara.'],['Food loss','Susut pangan; bahan pangan yang hilang sebelum sampai ke konsumen.'],['Food waste','Sisa pangan; makanan layak konsumsi yang dibuang.'],['Gas rumah kaca','Gas yang memerangkap panas di atmosfer, seperti CO₂ dan metana.'],['Infografis','Penyajian informasi dalam bentuk gambar, data, dan teks singkat.'],['Kompos','Pupuk organik hasil penguraian bahan organik.'],['Maggot','Larva lalat Black Soldier Fly yang dapat mengurai sampah organik.'],['MBG','Makan Bergizi Gratis, program pemerintah penyediaan makanan bergizi bagi murid.'],['Metana (CH₄)','Gas rumah kaca hasil penguraian anaerob yang memerangkap panas lebih kuat daripada CO₂.'],['Mitigasi','Upaya mengurangi penyebab atau dampak suatu masalah, misalnya perubahan iklim.'],['Perubahan iklim','Perubahan pola cuaca jangka panjang, salah satunya akibat pemanasan global.'],['SIPSN','Sistem Informasi Pengelolaan Sampah Nasional milik Kementerian Lingkungan Hidup.'],['TPA','Tempat Pemrosesan Akhir sampah.'],['Unsur hara','Zat makanan yang dibutuhkan tanaman, seperti nitrogen, fosfor, dan kalium.'],["Aktivator", "Bahan yang ditambahkan untuk mempercepat proses pengomposan, misalnya EM4 atau air cucian beras."],["Bank sampah", "Tempat warga menabung sampah terpilah yang dapat ditukar dengan uang atau barang."],["Ketahanan pangan", "Keadaan ketika setiap orang dapat memperoleh makanan yang cukup, bergizi, dan aman."],["Komposter", "Wadah untuk membuat kompos, misalnya ember atau keranjang berlubang."],["Pembangunan berkelanjutan", "Pembangunan yang memenuhi kebutuhan sekarang tanpa merugikan generasi mendatang."],["Pengomposan", "Proses mengubah bahan organik menjadi kompos dengan bantuan mikroorganisme."],["SDGs", "Sustainable Development Goals, yaitu 17 Tujuan Pembangunan Berkelanjutan yang disepakati dunia."],["Sumber energi terbarukan", "Sumber energi yang dapat diperbarui secara alami, seperti matahari, angin, air, dan biogas."]];
+GL.sort((x,y)=>x[0].localeCompare(y[0],'id'));const gl=v=>$('#glList').innerHTML=GL.filter(g=>(g[0]+g[1]).toLowerCase().includes(v.toLowerCase())).map(g=>`<dt>${g[0]}</dt><dd>${g[1]}</dd>`).join('');
 gl('');$('#gq').oninput=e=>gl(e.target.value);
 
 
@@ -1743,13 +1572,36 @@ function layout(keepId){
   let s=zoom?Math.min(aw/PW,1.35):Math.min(aw/BW,ah/PH);
   s=Math.max(.2,s);
   book.style.transform=`scale(${s})`;bbox.style.width=BW*s+'px';bbox.style.height=PH*s+'px';
-  fitHeads();
+  fitHeads();fitSecs();
   pages=Math.max(1,Math.floor($('#endMark').offsetLeft/PW)+1);
   starts={};secs.forEach(x=>{const c=x.firstElementChild;const fl=flow.getBoundingClientRect(),s=book.getBoundingClientRect().width/book.offsetWidth||1;const r=(c||x).getBoundingClientRect();starts[x.id]=Math.floor((r.left-fl.left+2)/s/PW)});
   $$('[data-pnum]').forEach(e=>e.textContent=starts[e.dataset.pnum]+1);
   $('#slider').max=Math.ceil(pages/step())-1;
   if(keepId&&starts[keepId]!==undefined)page=starts[keepId];
   go(page,true);
+}
+function lastFill(sec){
+  const s=book.getBoundingClientRect().width/book.offsetWidth||1,f=flow.getBoundingClientRect();
+  let pc=-1,pb=0;sec.querySelectorAll('*').forEach(e=>{for(const r of e.getClientRects()){if(r.height<1||r.width<1)continue;const c=Math.floor((r.left-f.left+1)/s/PW),bt=(r.bottom-f.top)/s;if(c>pc){pc=c;pb=bt}else if(c===pc&&bt>pb)pb=bt}});
+  return {c:pc,fill:(pb-92)/(PH-184)};
+}
+function fitSecs(){
+  $$('#flow table.t').forEach(tb=>{if(tb.rows.length<=8)tb.style.breakInside='avoid'});
+  $$('#flow .sec.brk').forEach(sec=>{
+    const im=sec.querySelector('.sh .ill.photo img');if(!im)return;
+    im.style.aspectRatio='';im.style.height='';
+    for(let k=0;k<3;k++){
+      const h0=im.getBoundingClientRect().height/(book.getBoundingClientRect().width/book.offsetWidth||1);
+      const a=lastFill(sec);let h=null;
+      if(a.fill<0.3)h=h0-(a.fill*(PH-184))-40;
+      else if(a.fill<0.86)h=Math.min(h0+(0.93-a.fill)*(PH-184),560);
+      if(h===null||h<140||Math.abs(h-h0)<8)break;
+      const prevH=im.style.height,prevA=im.style.aspectRatio;
+      im.style.aspectRatio='auto';im.style.height=Math.round(h)+'px';
+      const b=lastFill(sec);
+      if(b.c>a.c&&b.fill<0.6||b.c<a.c&&b.fill<a.fill&&false){im.style.height=prevH;im.style.aspectRatio=prevA;break}
+    }
+  });
 }
 function fitHeads(){
   const MT=92,MB=92,AV=PH-MT-MB;
@@ -1766,8 +1618,8 @@ function fitHeads(){
     if(pc<0||hc<=pc)return;
     const gap=(PH-MB)-pb;if(gap<230)return;
     const other=hr.height/s-im.getBoundingClientRect().height/s;
-    const target=Math.floor(gap-other-48);
-    if(target>=150){im.style.aspectRatio='auto';im.style.height=Math.min(target,300)+'px'}
+    const target=Math.floor(gap-other-95);
+    if(target>=130){im.style.aspectRatio='auto';im.style.height=Math.min(target,300)+'px'}
   });
 }
 function secAt(p){let c=secs[0];secs.forEach(x=>{if(starts[x.id]<=p)c=x});return c}
@@ -1776,6 +1628,7 @@ function chrome(el,p,side){
   const s=secAt(p),isOpen=s.classList.contains('opener')&&starts[s.id]===p;
   el.dataset.theme=s.dataset.theme||'pre';
   el.className='chrome '+side+(isOpen?' hide':'');
+  if(single&&(p+1)%2===1)el.classList.add('odd');
   const bg=$(side==='l'?'#bgL':'#bgR');bg.dataset.theme=el.dataset.theme;bg.classList.toggle('on',isOpen);
   const t=s.dataset.title.replace(/^\d[a-z]?\.\s*/,'');
   const chap={pre:'Bagian Awal',b1:'Bab 1',b2:'Bab 2',b3:'Bab 3',b4:'Bab 4',end:'Bagian Akhir'}[el.dataset.theme];
@@ -1819,12 +1672,10 @@ showResume();
 const tocStruct=[['kata-pengantar',0,'1. Kata Pengantar'],['daftar-isi',0,'2. Daftar Isi'],['petunjuk',0,'3. Petunjuk Penggunaan'],['cp',0,'4. Capaian Pembelajaran'],['tp',0,'5. Tujuan Pembelajaran'],['karakter',0,'6. Perkenalan Karakter'],['materi',0,'7. Materi'],
 ['bab1',1,'Bab 1. Hubungan Komponen Biotik dan Abiotik yang Mengganggu Ekosistem'],['b1a',2,'a. Jenis-jenis sampah organik'],['b1b',2,'b. Sampah sisa makanan'],['b1c',2,'c. Pengaruh sampah sisa makanan terhadap komponen biotik, abiotik, dan keseimbangan ekosistem'],['b1d',2,'d. Keterkaitan masalah sampah sisa makanan dengan kesehatan, kemiskinan, dan biodiversitas'],
 ['bab2',1,'Bab 2. Upaya Penghematan Energi'],['b2a',2,'a. Potensi masalah sampah makanan untuk pengembangan berkelanjutan'],['b2b',2,'b. Solusi penanganan sampah sisa makanan'],['b2c',2,'c. Langkah-langkah pembuatan pupuk dari sampah sisa makanan'],['b2d',2,'d. Manfaat pupuk kompos untuk menyuburkan tanaman'],['b2e',2,'e. Manfaat pupuk kompos dalam bidang ekonomi'],['b2f',2,'f. Perilaku ramah lingkungan'],
-['bab3',1,'Bab 3. Operasi Hitung'],['b3a',2,'a. Menghitung proporsi jumlah sampah'],['b3b',2,'b. Pengolahan sampah sisa makanan menjadi pupuk kompos'],
-['bab4',1,'Bab 4. Teks Nonsastra'],['b4a',2,'a. Contoh teks nonsastra tentang sampah sisa makanan'],['b4b',2,'b. Teks persuasi ajakan bebas emisi'],
 ['evaluasi',0,'8. Soal Evaluasi'],['glosarium',0,'9. Glosarium'],['pustaka',0,'10. Daftar Pustaka']];
 $('#tocList').innerHTML=tocStruct.map(([id,l,t])=>`<a data-goto="${id}" class="${l===1?'sub':l===2?'sub2':''}"><span>${l<=1?'<b>'+t+'</b>':t}</span><span class="dots"></span><span data-pnum="${id}"></span></a>`).join('');
 $('#tocList').previousElementSibling.textContent='Klik judul untuk langsung menuju halaman.';
-const PRINTPOS={"kata-pengantar": 3, "daftar-isi": 4, "petunjuk": 5, "cp": 7, "tp": 8, "karakter": 10, "materi": 12, "bab1": 13, "b1a": 15, "b1b": 17, "b1c": 20, "b1d": 24, "bab2": 28, "b2a": 29, "b2b": 31, "b2c": 33, "b2d": 37, "b2e": 38, "b2f": 40, "bab3": 42, "b3a": 43, "b3b": 46, "bab4": 49, "b4a": 50, "b4b": 54, "evaluasi": 57, "glosarium": 61, "pustaka": 63};$$('[data-pnum]').forEach(e=>e.dataset.pp=PRINTPOS[e.dataset.pnum]||'');
+const PRINTPOS={"kata-pengantar": 3, "daftar-isi": 4, "petunjuk": 5, "cp": 6, "tp": 7, "karakter": 8, "materi": 10, "bab1": 11, "b1a": 13, "b1b": 16, "b1c": 19, "b1d": 23, "bab2": 28, "b2a": 30, "b2b": 33, "b2c": 36, "b2d": 40, "b2e": 42, "b2f": 44, "evaluasi": 48, "glosarium": 52, "pustaka": 55};$$('[data-pnum]').forEach(e=>e.dataset.pp=PRINTPOS[e.dataset.pnum]||'');
 })();
 </script>
 </body>
